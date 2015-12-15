@@ -27,6 +27,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'majutsushi/tagbar'
+Plugin 'elixir-lang/vim-elixir'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
