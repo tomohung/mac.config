@@ -1,7 +1,14 @@
 vim plugin manager by using Vundle
 
+0. $ ln -s ~/.vim/vimrc ~/.vimrc 
 1. `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 2. open vim
 3. `:PluginInstall`
+
+for tmux plugin manager
+0. ln -s ~/.vim/tmux.conf ~/.tmux.conf
+1. $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+2. open tmux 
+3. `prefix + I` -> install plugin
 
 Done
