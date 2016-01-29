@@ -59,6 +59,8 @@ set expandtab
 set fileformat=unix
 
 set cursorline
+map <F2> :set cursorcolumn!<CR>
+
 set autoread
 
 "for air-line
