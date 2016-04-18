@@ -73,3 +73,4 @@ syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
+let g:Tlist_Ctags_Cmd='/usr/local/bin/ctags'
