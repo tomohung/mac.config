@@ -23,7 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'majutsushi/tagbar'
@@ -42,7 +42,7 @@ let g:ctrlp_show_hidden = 1
 nmap <F8> :TagbarToggle<CR>
 
 "lazyredraw make faster when viewing html/haml
-set lazyredraw
+" set lazyredraw
 
 set background=dark
 colorscheme solarized
