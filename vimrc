@@ -21,7 +21,6 @@ Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
 " Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
@@ -31,9 +30,15 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'rizzatti/dash.vim'
 Plugin 'elzr/vim-json'
 
+Plugin 'altercation/vim-colors-solarized'
+
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
@@ -42,11 +47,8 @@ let g:ctrlp_show_hidden = 1
 nmap <F8> :TagbarToggle<CR>
 
 "lazyredraw make faster when viewing html/haml
-set lazyredraw
+" set lazyredraw
 
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
 set number
 set hlsearch
 
