@@ -42,7 +42,7 @@ let g:ctrlp_show_hidden = 1
 nmap <F8> :TagbarToggle<CR>
 
 "lazyredraw make faster when viewing html/haml
-" set lazyredraw
+set lazyredraw
 
 set background=dark
 colorscheme solarized
