@@ -17,7 +17,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-Plugin 'rking/ag.vim'
+" Plugin 'rking/ag.vim'
+Plugin 'nazo/pt.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
@@ -27,7 +28,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'majutsushi/tagbar'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'rizzatti/dash.vim'
+" Plugin 'rizzatti/dash.vim'
 Plugin 'elzr/vim-json'
 
 Plugin 'altercation/vim-colors-solarized'
@@ -47,7 +48,7 @@ let g:ctrlp_show_hidden = 1
 nmap <F8> :TagbarToggle<CR>
 
 "lazyredraw make faster when viewing html/haml
-" set lazyredraw
+set lazyredraw
 
 set number
 set hlsearch
