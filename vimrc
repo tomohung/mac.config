@@ -29,7 +29,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'majutsushi/tagbar'
 Plugin 'elixir-lang/vim-elixir'
 " Plugin 'rizzatti/dash.vim'
-Plugin 'elzr/vim-json'
+" Plugin 'elzr/vim-json'
 
 Plugin 'altercation/vim-colors-solarized'
 
