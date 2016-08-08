@@ -73,7 +73,7 @@ set autoread
 
 "for air-line
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " for vim-ruby
 set nocompatible      " We're running Vim, not Vi!
