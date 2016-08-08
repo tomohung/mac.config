@@ -27,10 +27,11 @@ Plugin 'tpope/vim-commentary'
 " Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
+Plugin 'easymotion/vim-easymotion'
 " Plugin 'rizzatti/dash.vim'
 " Plugin 'elzr/vim-json'
 
@@ -72,6 +73,7 @@ set autoread
 
 "for air-line
 set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
 
 " for vim-ruby
 set nocompatible      " We're running Vim, not Vi!
