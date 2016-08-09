@@ -51,6 +51,11 @@ let g:ctrlp_show_hidden = 1
 
 nmap <F8> :TagbarToggle<CR>
 
+"map <Leader> key from '\' to ','
+let mapleader = ","
+"short cut change from <Leader><Leader> to <Leader>
+map <Leader> <Plug>(easymotion-prefix)
+
 "lazyredraw make faster when viewing html/haml
 set lazyredraw
 
