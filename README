@@ -11,4 +11,6 @@ for tmux plugin manager
 2. open tmux 
 3. `prefix + I` -> install plugin
 
+for ctags (elixir)
+0. ln -s ~/.vim/ctags ~/.ctags
 Done
