@@ -22,7 +22,7 @@ Plugin 'nazo/pt.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-commentary'
 " Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
@@ -36,6 +36,7 @@ Plugin 'easymotion/vim-easymotion'
 " Plugin 'elzr/vim-json'
 
 Plugin 'altercation/vim-colors-solarized'
+" Plugin 'gosukiwi/vim-atom-dark'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +44,7 @@ filetype plugin indent on    " required
 
 set background=dark
 colorscheme solarized
+" colorscheme atom-dark-256
 let g:solarized_termcolors=256
 
 map <C-n> :NERDTreeToggle<CR>
@@ -78,6 +80,7 @@ set autoread
 
 "for air-line
 set laststatus=2
+" let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
 
 " for vim-ruby
