@@ -29,3 +29,4 @@ let mapleader=","  " leader is comma
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
+set path+=** " search down into subfolders
