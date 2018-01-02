@@ -1,9 +1,12 @@
-vim plugin manager by using Vundle
+renew my vim config for 2018!!
 
-0. $ ln -s ~/.vim/vimrc ~/.vimrc 
-1. `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+vim config is built from scratch!
+
+vim plugin manager switch to vim-plug, it's much simpler.
+
+1. $ ln -s ~/.vim/vimrc ~/.vimrc 
 2. open vim
-3. `:PluginInstall`
+3. `:PlugInstall`
 
 for tmux plugin manager
 0. ln -s ~/.vim/tmux.conf ~/.tmux.conf
