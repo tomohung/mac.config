@@ -27,6 +27,6 @@ set autoread
 let mapleader=","  " leader is comma
 
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 set path+=** " search down into subfolders
