@@ -13,6 +13,7 @@ call plug#end()
 colorscheme codedark
 
 syntax enable
+set shiftwidth=2
 set tabstop=2 " number of visual spaces per TAB
 set expandtab " tabs are spaces
 set number " show line numbers
