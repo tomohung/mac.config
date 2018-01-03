@@ -8,6 +8,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 colorscheme codedark
@@ -32,3 +33,8 @@ let mapleader=","  " leader is comma
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 set path+=** " search down into subfolders
+
+" set ag with Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
