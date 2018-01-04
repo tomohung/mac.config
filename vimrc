@@ -38,3 +38,6 @@ set path+=** " search down into subfolders
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+"For netrw
+let g:netrw_banner = 0 " turn off banner
