@@ -9,6 +9,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'mileszs/ack.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 colorscheme codedark
@@ -24,6 +28,7 @@ set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
 set hlsearch
 set incsearch
+set smartcase " case insensitive, only sensitive when first char is capital
 set autoread
 set ttyfast
 
@@ -39,5 +44,5 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-"For netrw
+" For netrw
 let g:netrw_banner = 0 " turn off banner
