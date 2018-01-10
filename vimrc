@@ -39,7 +39,7 @@ let mapleader=","  " leader is comma
 " turn off search highlight
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
-set path+=** " search down into subfolders
+set path+=** " :find search down into subfolders
 
 " set ag with Ack
 if executable('ag')
@@ -47,4 +47,4 @@ if executable('ag')
 endif
 
 " For netrw
-let g:netrw_banner = 0 " turn off banner
+" let g:netrw_banner = 0 " turn off banner
