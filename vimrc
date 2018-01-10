@@ -12,20 +12,21 @@ Plug 'mileszs/ack.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme codedark
 
 syntax enable
+filetype plugin indent on " load filetype-specific indnet files and plugin
 set shiftwidth=2
 set tabstop=2 " number of visual spaces per TAB
 set expandtab " tabs are spaces
 set number " show line numbers
 " set cursorline " highlight current line
-filetype indent on " load filetype-specific indnet files
 set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
 set hlsearch
