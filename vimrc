@@ -12,8 +12,8 @@ Plug 'vim-airline/vim-airline' " better status bar
 " Basic operation
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AddFromSearch/:AckFile
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary' " gc/gcc
+Plug 'tpope/vim-surround' " cs<origin><new> ds/cst/ys <v-block>S<new>
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 
 Plug 'tpope/vim-fugitive' " Git wrapper
