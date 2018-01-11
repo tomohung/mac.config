@@ -7,15 +7,19 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'tomasiser/vim-code-dark'
-Plug 'vim-airline/vim-airline'
-Plug 'mileszs/ack.vim'
+Plug 'vim-airline/vim-airline' " better status bar
+
+" Basic operation
+Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AddFromSearch/:AckFile
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
+
+Plug 'tpope/vim-fugitive' " Git wrapper
+" Language specific
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'tpope/vim-fugitive' " Git wrapper
 Plug 'tpope/vim-endwise' "wisely add end in ruby/elixir and other languages
 call plug#end()
 
@@ -36,25 +40,28 @@ set incsearch
 set ignorecase " case insensitive"
 set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
 set autoread
-set ttyfast
 set path+=** " :find search down into subfolders
-set nobackup		" no *~ backup files
 
 """ Key Mapping
-"space as leader
+"space as leader, Spacemacs-stype
 let mapleader = " "
 
 " turn off search highlight
-nnoremap <silent> <leader>/ :<C-u>nohlsearch<CR>
-
+nnoremap <C-l> :<C-u>nohlsearch<CR>
 " Switch between the last two files
-nnoremap <Leader><Leader> <C-^>
+nnoremap <Leader><Tab> <C-^>
+" Ack
+nnoremap <Leader>/ :Ack!<Space>
 
-""" Aditional Settings
+""" Plugin Config
+" For netrw
+" let g:netrw_banner = 0 " turn off banner
+
+" airline
+let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
+
 " set ag with Ack
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" For netrw
-" let g:netrw_banner = 0 " turn off banner
