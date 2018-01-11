@@ -37,13 +37,14 @@ set smartcase " case insensitive, only sensitive when first char is capital, and
 set autoread
 set ttyfast
 set path+=** " :find search down into subfolders
+set nobackup		" no *~ backup files
 
 """ Key Mapping
 "space as leader
-let mapleader = " " 
+let mapleader = " "
 
 " turn off search highlight
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <leader>/ :<C-u>nohlsearch<CR>
 
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
