@@ -92,6 +92,7 @@ nmap <silent> <leader>q :call ToggleList("Quickfix List", 'c')<CR>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
+" let g:airline_powerline_fonts = 1 " enable powerline special glyph fonts
 
 " set ag with Ack
 if executable('ag')
