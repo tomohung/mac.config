@@ -6,13 +6,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'tomasiser/vim-code-dark'
+Plug 'tomasiser/vim-code-dark' " theme
 Plug 'vim-airline/vim-airline' " better status bar
 
 " Basic operation
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary' " gc/gcc
-Plug 'tpope/vim-surround' " cs<origin><new> ds/cst/ys/<v-block>S<new>
+Plug 'tpope/vim-surround' " cs<origin><new>/ds/cst/ys/<v-block>S<new>
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n
 
@@ -50,7 +50,7 @@ set path+=** " :find search down into subfolders
 let mapleader = " "
 
 " turn off search highlight
-nnoremap <C-l> :<C-u>nohlsearch<CR>
+nnoremap <Leader><Leader> :<C-u>nohlsearch<CR>
 " Switch between the last two files
 nnoremap <Leader><Tab> <C-^>
 " Ack
