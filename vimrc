@@ -15,11 +15,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' " Git wrapper
 call plug#end()
 
 colorscheme codedark
 
+""" Config
 syntax enable
 filetype plugin indent on " load filetype-specific indnet files and plugin
 set shiftwidth=2
@@ -34,14 +35,19 @@ set incsearch
 set smartcase " case insensitive, only sensitive when first char is capital
 set autoread
 set ttyfast
+set path+=** " :find search down into subfolders
 
-let mapleader=","  " leader is comma
+""" Key Mapping
+"space as leader
+let mapleader = " " 
 
 " turn off search highlight
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
-set path+=** " :find search down into subfolders
+" Switch between the last two files
+nnoremap <Leader><Leader> <C-^>
 
+""" Aditional Settings
 " set ag with Ack
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
