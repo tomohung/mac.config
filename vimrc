@@ -16,6 +16,7 @@ Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive' " Git wrapper
+Plug 'tpope/vim-endwise' "wisely add end in ruby/elixir and other languages
 call plug#end()
 
 colorscheme codedark
