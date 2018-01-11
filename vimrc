@@ -32,7 +32,8 @@ set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
 set hlsearch
 set incsearch
-set smartcase " case insensitive, only sensitive when first char is capital
+set ignorecase " case insensitive"
+set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
 set autoread
 set ttyfast
 set path+=** " :find search down into subfolders
