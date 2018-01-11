@@ -16,7 +16,7 @@ Plug 'tpope/vim-commentary' " gc/gcc
 Plug 'tpope/vim-surround' " cs<origin><new> ds/cst/ys <v-block>S<new>
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 
-Plug 'tpope/vim-fugitive' " Git wrapper
+Plug 'tpope/vim-fugitive' " :Gstatus(-/p/C-n/U/dp)/:Gblame/:Gdiff/:Gread/:Gwrite
 " Language specific
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
