@@ -10,13 +10,16 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline' " better status bar
 
 " Basic operation
-Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AddFromSearch/:AckFile
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary' " gc/gcc
-Plug 'tpope/vim-surround' " cs<origin><new> ds/cst/ys <v-block>S<new>
+Plug 'tpope/vim-surround' " cs<origin><new> ds/cst/ys/<v-block>S<new>
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
+Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n
 
+" Tools
+Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
 Plug 'tpope/vim-fugitive' " :Gstatus(-/p/C-n/U/dp)/:Gblame/:Gdiff/:Gread/:Gwrite
+
 " Language specific
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -52,6 +55,36 @@ nnoremap <C-l> :<C-u>nohlsearch<CR>
 nnoremap <Leader><Tab> <C-^>
 " Ack
 nnoremap <Leader>/ :Ack!<Space>
+
+" toggle quickfix window
+function! GetBufferList()
+  redir =>buflist
+  silent! ls!
+  redir END
+  return buflist
+endfunction
+
+function! ToggleList(bufname, pfx)
+  let buflist = GetBufferList()
+  for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
+    if bufwinnr(bufnum) != -1
+      exec(a:pfx.'close')
+      return
+    endif
+  endfor
+  if a:pfx == 'l' && len(getloclist(0)) == 0
+      echohl ErrorMsg
+      echo "Location List is Empty."
+      return
+  endif
+  let winnr = winnr()
+  exec(a:pfx.'open')
+  if winnr() != winnr
+    wincmd p
+  endif
+endfunction
+nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
+nmap <silent> <leader>q :call ToggleList("Quickfix List", 'c')<CR>
 
 """ Plugin Config
 " For netrw
