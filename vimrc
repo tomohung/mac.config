@@ -20,6 +20,7 @@ Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
 Plug 'tpope/vim-fugitive' " :Gstatus(-/p/C-n/U/dp)/:Gblame/:Gdiff/:Gread/:Gwrite
+Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 
 " Language specific
 Plug 'pangloss/vim-javascript'
@@ -121,3 +122,5 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+" set Dispath for vim-rspec
+let g:rspec_command = "Dispatch rspec {spec}"
