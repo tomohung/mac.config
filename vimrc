@@ -24,13 +24,13 @@ Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 Plug 'majutsushi/tagbar' " display tags in a winsow
 
 " deoplete: asynchronous completion framework; brew remove vim; brew cleanup; brew install vim --with-python3
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
 
 " Language specific
 Plug 'pangloss/vim-javascript'
@@ -48,7 +48,7 @@ set shiftwidth=2
 set tabstop=2 " number of visual spaces per TAB
 set expandtab " tabs are spaces
 set number " show line numbers
-set cursorline " highlight current line
+" set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
 set hlsearch
@@ -139,4 +139,4 @@ endif
 let g:rspec_command = "Dispatch rspec {spec}"
 
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
