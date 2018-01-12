@@ -92,6 +92,9 @@ endfunction
 nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
 nmap <silent> <leader>q :call ToggleList("Quickfix List", 'c')<CR>
 
+" shortcut for open buffer list and enter buffer number/filename
+nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+
 """ Plugin Config
 " For netrw
 " let g:netrw_banner = 0 " turn off banner
