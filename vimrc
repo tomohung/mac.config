@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary' " gc/gcc
 Plug 'tpope/vim-surround' " cs<origin><new>/ds/cst/ys/<v-block>S<new>
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n
+Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
 
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
