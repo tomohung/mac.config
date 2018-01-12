@@ -21,6 +21,7 @@ Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
 Plug 'tpope/vim-fugitive' " :Gstatus(-/p/C-n/U/dp)/:Gblame/:Gdiff/:Gread/:Gwrite
 Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
+Plug 'majutsushi/tagbar' " display tags in a winsow
 
 " Language specific
 Plug 'pangloss/vim-javascript'
@@ -75,6 +76,9 @@ nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit -v -q<CR>
 nnoremap <Leader>gp :Git push<CR>
+
+" tagbar toggle
+nmap <Leader>tt :TagbarToggle<CR>
 
 " toggle quickfix window
 function! GetBufferList()
