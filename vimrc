@@ -23,7 +23,8 @@ Plug 'tpope/vim-fugitive' " :Gstatus(-/p/C-n/U/dp)/:Gblame/:Gdiff/:Gread/:Gwrite
 " Language specific
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'tpope/vim-endwise' "wisely add end in ruby/elixir and other languages
+Plug 'tpope/vim-endwise' " wisely add end in ruby/elixir and other languages
+Plug 'thoughtbot/vim-rspec' " rspec <leader>rf <leader>rs <leader>rl <leader>ra
 call plug#end()
 
 colorscheme codedark
@@ -55,6 +56,11 @@ nnoremap <Leader><Leader> :<C-u>nohlsearch<CR>
 nnoremap <Leader><Tab> <C-^>
 " Ack
 nnoremap <Leader>/ :Ack!<Space>
+" RSpec.vim mappings
+map <Leader>rf :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
 
 " toggle quickfix window
 function! GetBufferList()
