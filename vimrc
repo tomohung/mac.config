@@ -50,7 +50,7 @@ set smartcase " case insensitive, only sensitive when first char is capital, and
 set autoread
 set path+=** " :find search down into subfolders
 
-autocmd! BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw " reload after save vimrc
+autocmd! BufWritePost .vimrc,vimrc source $MYVIMRC | redraw " reload after save vimrc
 
 """ Key Mapping
 "space as leader, Spacemacs-stype
