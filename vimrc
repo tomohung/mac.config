@@ -49,6 +49,8 @@ set ignorecase " case insensitive"
 set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
 set autoread
 set path+=** " :find search down into subfolders
+set noswapfile " no swap file
+set nobackup
 
 autocmd! BufWritePost .vimrc,vimrc source $MYVIMRC | redraw " reload after save vimrc
 
