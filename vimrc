@@ -89,6 +89,32 @@ nnoremap <Leader>gp :Git push<CR>
 nmap <Leader>tt :TagbarToggle<CR>
 
 " toggle quickfix window
+nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
+nmap <silent> <leader>q :call ToggleList("Quickfix List", 'c')<CR>
+
+" shortcut for open buffer list and enter buffer number/filename
+nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+
+""" Plugin Config
+" For netrw
+" let g:netrw_banner = 0 " turn off banner
+
+" airline
+let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
+let g:airline#extensions#tagbar#enabled = 0
+" let g:airline_powerline_fonts = 1 " enable powerline special glyph fonts
+
+" set ag with Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" set Dispath for vim-rspec
+let g:rspec_command = "Dispatch rspec {spec}"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Helper functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! GetBufferList()
   redir =>buflist
   silent! ls!
@@ -115,26 +141,3 @@ function! ToggleList(bufname, pfx)
     wincmd p
   endif
 endfunction
-nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
-nmap <silent> <leader>q :call ToggleList("Quickfix List", 'c')<CR>
-
-" shortcut for open buffer list and enter buffer number/filename
-nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
-
-""" Plugin Config
-" For netrw
-" let g:netrw_banner = 0 " turn off banner
-
-" airline
-let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
-let g:airline#extensions#tagbar#enabled = 0
-" let g:airline_powerline_fonts = 1 " enable powerline special glyph fonts
-
-" set ag with Ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
-" set Dispath for vim-rspec
-let g:rspec_command = "Dispatch rspec {spec}"
-
