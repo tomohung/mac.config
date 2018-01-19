@@ -7,6 +7,15 @@ vim plugin manager switch to vim-plug, it's much simpler.
 1. $ ln -s ~/.vim/vimrc ~/.vimrc 
 2. open vim
 3. `:PlugInstall`
+that's all!!
+
+for Neovim
+To start the transition, create ~/.config/nvim/init.vim with these contents:
+```
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vimrc
+```
 
 for tmux plugin manager
 0. ln -s ~/.vim/tmux.conf ~/.tmux.conf
