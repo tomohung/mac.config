@@ -22,6 +22,9 @@ Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
 Plug 'tpope/vim-fugitive' " :Gstatus(-/p/C-n/U/dp)/:Gblame/:Gdiff/:Gread/:Gwrite
 Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 Plug 'majutsushi/tagbar' " display tags in a winsow
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+endif
 
 " Language specific
 Plug 'pangloss/vim-javascript'
@@ -111,6 +114,9 @@ endif
 
 " set Dispath for vim-rspec
 let g:rspec_command = "Dispatch rspec {spec}"
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
