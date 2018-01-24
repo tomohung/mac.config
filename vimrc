@@ -32,6 +32,8 @@ Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-endwise' " wisely add end in ruby/elixir and other languages
 Plug 'thoughtbot/vim-rspec' " rspec <leader>rf <leader>rs <leader>rl <leader>ra
 Plug 'elixir-editors/vim-elixir'
+Plug 'godlygeek/tabular' " required by vim-markdown
+Plug 'plasticboy/vim-markdown' " za zo zc to toggle folding
 call plug#end()
 
 colorscheme codedark
@@ -97,6 +99,9 @@ nmap <silent> <leader>q :call ToggleList("Quickfix List", 'c')<CR>
 
 " shortcut for open buffer list and enter buffer number/filename
 nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+
+" expand %% as current directory in command mode
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 """ Plugin Config
 " For netrw
