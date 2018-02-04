@@ -12,6 +12,8 @@ brew "diff-so-fancy"
 brew "glances"
 brew "htop"
 brew "leiningen"
+brew "mps-youtube"
+brew "mpv"
 EOF
 
 brew cask install iterm2
