@@ -10,8 +10,11 @@ brew "mongodb"
 brew "tree"
 brew "diff-so-fancy"
 brew "glances"
+brew "htop"
+brew "leiningen"
 EOF
 
+brew cask install java
 brew cask install iterm2
 brew cask install launchrocket
 brew cask install shiftit
@@ -22,6 +25,10 @@ brew cask install skitch
 brew cask install sequel-pro
 brew cask install sourcetree
 brew cask install nally
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
 
 default_docker_machine() {
   docker-machine ls | grep -Fq "default"
@@ -38,10 +45,6 @@ default_docker_machine_running() {
 if ! default_docker_machine_running; then
   docker-machine start default
 fi
-
-fancy_echo "Cleaning up old Homebrew formulae ..."
-brew cleanup
-brew cask cleanup
 
 if [ -r "$HOME/.rcrc" ]; then
   fancy_echo "Updating dotfiles ..."
