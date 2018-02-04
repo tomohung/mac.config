@@ -9,6 +9,10 @@ https://github.com/thoughtbot/laptop
 ### Update Mac
 3. sh mac 2>&1 | tee ~/laptop.log
 
+## config for diff-so-fancy
+https://github.com/so-fancy/diff-so-fancy
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+
 ## Antigen for ZSH
 1. $ ln -s ~/mac-config/zshrc ~/.zshrc
 make sure iTerm is using zsh, then close iTerm and open again will automatical update
