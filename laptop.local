@@ -14,7 +14,6 @@ brew "htop"
 brew "leiningen"
 EOF
 
-brew cask install java
 brew cask install iterm2
 brew cask install launchrocket
 brew cask install shiftit
