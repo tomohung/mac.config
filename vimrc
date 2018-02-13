@@ -33,7 +33,6 @@ Plug 'tpope/vim-endwise' " wisely add end in ruby/elixir and other languages
 Plug 'thoughtbot/vim-rspec' " rspec <leader>rf <leader>rs <leader>rl <leader>ra
 Plug 'elixir-editors/vim-elixir'
 Plug 'godlygeek/tabular' " required by vim-markdown
-Plug 'plasticboy/vim-markdown' " za zo zc to toggle folding
 call plug#end()
 
 colorscheme codedark
