@@ -25,6 +25,7 @@ Plug 'majutsushi/tagbar' " display tags in a winsow
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Language specific
 Plug 'pangloss/vim-javascript'
