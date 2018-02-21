@@ -46,7 +46,7 @@ set shiftwidth=2
 set tabstop=2 " number of visual spaces per TAB
 set expandtab " tabs are spaces
 set number " show line numbers
-" set cursorline " highlight current line
+set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
 set hlsearch
@@ -65,7 +65,7 @@ autocmd! BufWritePost .vimrc,vimrc source $MYVIMRC | redraw " reload after save 
 let mapleader = " "
 
 " open vimrc
-nnoremap <Leader>vimrc :tabe $MYVIMRC<CR>
+nnoremap <Leader>vim :tabe $MYVIMRC<CR>
 
 " turn off search highlight
 nnoremap <Leader><Leader> :<C-u>nohlsearch<CR>
