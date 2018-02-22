@@ -30,7 +30,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " Language specific
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-endwise' " wisely add end in ruby/elixir and other languages
 Plug 'thoughtbot/vim-rspec' " rspec <leader>rf <leader>rs <leader>rl <leader>ra
 Plug 'elixir-editors/vim-elixir'
