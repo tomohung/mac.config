@@ -26,6 +26,8 @@ brew cask install skitch
 brew cask install sequel-pro
 brew cask install sourcetree
 brew cask install nally
+brew cask install quicksilver
+
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
