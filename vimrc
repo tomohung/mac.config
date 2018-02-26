@@ -17,6 +17,7 @@ Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n
 Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
 Plug 'michaeljsmith/vim-indent-object' "object as indent
+runtime macros/matchit.vim "extend match
 
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
