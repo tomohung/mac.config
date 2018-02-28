@@ -29,7 +29,7 @@ brew cask install nally
 brew cask install quicksilver
 brew cask install dash
 brew cask install yujitach-menumeters
-
+brew cask install keycastr
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
