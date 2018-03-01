@@ -19,7 +19,7 @@ antigen apply
 export PATH="$HOME/.bin:$PATH"
 
 # recommended by brew doctor
-export PATH="/usr/local/bin:$PATH"
+# export PATH="/usr/local/bin:$PATH"
 source /Users/tomohung/.asdf/asdf.sh
 
 # put local secret here
