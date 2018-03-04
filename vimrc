@@ -1,8 +1,16 @@
 " Install vim-plug automatically
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+if has('nvim') " for neovim
+  if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+    silent curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
+else " for vim
+  if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -15,9 +23,7 @@ Plug 'tpope/vim-commentary' " gc/gcc
 Plug 'tpope/vim-surround' " cs<origin><new>/ds/cst/ys/<v-block>S<new>
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n
-Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
-Plug 'michaeljsmith/vim-indent-object' "object as indent
-runtime macros/matchit.vim "extend match
+Plug 'easymotion/vim-easymotion' "<leader><leader>w
 
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
@@ -28,14 +34,23 @@ if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'SirVer/ultisnips' " Track the engine.
+Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
 
 " Language specific
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'tpope/vim-endwise' " wisely add end in ruby/elixir and other languages
-Plug 'thoughtbot/vim-rspec' " rspec <leader>rf <leader>rs <leader>rl <leader>ra
 Plug 'elixir-editors/vim-elixir'
-Plug 'godlygeek/tabular' " required by vim-markdown
+Plug 'mattn/emmet-vim' " exapnding abbreviations html
+
+" Ruby
+Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
+Plug 'michaeljsmith/vim-indent-object' "object as indent; > cii, cai
+Plug 'thoughtbot/vim-rspec' " rspec <leader>rf <leader>rs <leader>rl <leader>ra
+Plug 'tpope/vim-endwise' " wisely add end in ruby/elixir and other languages
+Plug 'tpope/vim-rails' " :A/:R, :Emodel/:Eview/:Econtroller, :help rails-navigation, :help rails-:Extract
+runtime macros/matchit.vim "extend match, ex: in ruby, begin..end, if..end
+
 call plug#end()
 
 colorscheme codedark
@@ -124,6 +139,11 @@ let g:rspec_command = "Dispatch rspec {spec}"
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
