@@ -21,16 +21,10 @@ make sure iTerm is using zsh, then close iTerm and open again will automatical u
 vim plugin manager switch to vim-plug, it's much simpler.
 
 1. $ ln -s ~/mac-config/vimrc ~/.vimrc 
+or neovim
+   $ ln -s ~/mac.config/vimrc ~/.config/nvim/init.vim
 2. open vim
 3. `:PlugInstall` # not necessary for first time
-
-for Neovim
-To start the transition, create ~/.config/nvim/init.vim with these contents:
-```
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-source ~/.vimrc
-```
 
 for tmux plugin manager
 0. ln -s ~/.vim/tmux.conf ~/.tmux.conf
