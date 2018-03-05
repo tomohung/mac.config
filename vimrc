@@ -84,7 +84,7 @@ let mapleader = " "
 nnoremap <Leader>vim :tabe $MYVIMRC<CR>
 
 " turn off search highlight
-nnoremap <Leader><Leader> :<C-u>nohlsearch<CR>
+nnoremap <Leader>no :<C-u>nohlsearch<CR>
 " Switch between the last two files
 nnoremap <Leader><Tab> <C-^>
 " Ack
