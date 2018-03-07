@@ -90,7 +90,7 @@ nnoremap <Leader><Tab> <C-^>
 " Ack
 nnoremap <Leader>/ :Ack!<Space>
 " Explore current directory
-nnoremap <Leader>e :e<Space>%:h/
+nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 " RSpec.vim mappings
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
