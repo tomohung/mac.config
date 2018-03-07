@@ -89,6 +89,8 @@ nnoremap <Leader>no :<C-u>nohlsearch<CR>
 nnoremap <Leader><Tab> <C-^>
 " Ack
 nnoremap <Leader>/ :Ack!<Space>
+" Explore current directory
+nnoremap <Leader>e :e<Space>%:h/
 " RSpec.vim mappings
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
