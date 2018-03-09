@@ -15,6 +15,7 @@ brew "leiningen"
 brew "mps-youtube"
 brew "mpv"
 brew "neovim"
+brew "chromedriver"
 EOF
 
 brew upgrade python
