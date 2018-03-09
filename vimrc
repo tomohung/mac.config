@@ -36,6 +36,7 @@ endif
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'SirVer/ultisnips' " Track the engine.
 Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
+Plug 'janko-m/vim-test' " Run tests <leader>tn <leader>tf <leader>ts <leader>tl
 
 " Language specific
 Plug 'pangloss/vim-javascript'
@@ -46,7 +47,6 @@ Plug 'mattn/emmet-vim' " exapnding abbreviations html
 " Ruby
 Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
 Plug 'michaeljsmith/vim-indent-object' "object as indent; > cii, cai
-Plug 'thoughtbot/vim-rspec' " rspec <leader>rf <leader>rs <leader>rl <leader>ra
 Plug 'tpope/vim-endwise' " wisely add end in ruby/elixir and other languages
 Plug 'tpope/vim-rails' " :A/:R, :Emodel/:Eview/:Econtroller, :help rails-navigation, :help rails-:Extract
 runtime macros/matchit.vim "extend match, ex: in ruby, begin..end, if..end
@@ -91,11 +91,13 @@ nnoremap <Leader><Tab> <C-^>
 nnoremap <Leader>/ :Ack!<Space>
 " Explore current directory
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
-" RSpec.vim mappings
-map <Leader>rf :call RunCurrentSpecFile()<CR>
-map <Leader>rs :call RunNearestSpec()<CR>
-map <Leader>rl :call RunLastSpec()<CR>
-map <Leader>ra :call RunAllSpecs()<CR>
+
+" vim-test mappings
+map <Leader>tn :TestNearest<CR>
+map <Leader>tf :TestFile<CR>
+map <Leader>ts :TestSuite<CR>
+map <Leader>tl :TestLast<CR>
+map <Leader>tv :TestVisit<CR>
 
 " fugitive git bindings
 nnoremap <Leader>ga :Git add %:p<CR><CR>
@@ -136,16 +138,11 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" set Dispath for vim-rspec
-let g:rspec_command = "Dispatch rspec {spec}"
+" make test commands execute using dispatch.vim
+let test#strategy = "dispatch"
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " ruby-vim indentation styles; normal/indent/outdent
 let g:ruby_indent_access_modifier_style = 'indent'
