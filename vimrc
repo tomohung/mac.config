@@ -28,6 +28,7 @@ Plug 'easymotion/vim-easymotion' "<leader><leader>w
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
 Plug 'tpope/vim-fugitive' " :Gstatus(-/p/C-n/U/dp)/:Gblame/:Gdiff/:Gread/:Gwrite
+Plug 'airblade/vim-gitgutter' " show git diff in the gutter
 Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 Plug 'majutsushi/tagbar' " display tags in a winsow
 if has('nvim')
@@ -73,6 +74,7 @@ set autoread
 set path+=** " :find search down into subfolders
 set noswapfile " no swap file
 set nobackup
+set updatetime=500 " update status like git-gutter by ms
 
 autocmd! BufWritePost .vimrc,vimrc source $MYVIMRC | redraw " reload after save vimrc
 
