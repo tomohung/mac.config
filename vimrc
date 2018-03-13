@@ -122,9 +122,6 @@ nmap <Leader>tt :TagbarToggle<CR>
 nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
 nmap <silent> <leader>q :call ToggleList("Quickfix List", 'c')<CR>
 
-" shortcut for open buffer list and enter buffer number/filename
-nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
-
 " expand %% as current directory in command mode
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
