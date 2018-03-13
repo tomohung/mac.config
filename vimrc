@@ -39,6 +39,7 @@ Plug 'SirVer/ultisnips' " Track the engine.
 Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
 Plug 'janko-m/vim-test' " Run tests <leader>tn <leader>tf <leader>ts <leader>tl
 Plug 'tpope/vim-bundler' " gem install gem-catgs; gem ctags; will generate all tags from gemfile
+Plug 'jlanzarotta/bufexplorer' " BufExplorer <leader>be
 
 " Language specific
 Plug 'pangloss/vim-javascript'
