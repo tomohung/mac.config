@@ -33,7 +33,7 @@ brew cask install skitch
 brew cask install sequel-pro
 brew cask install sourcetree
 brew cask install nally
-brew cask install quicksilver
+brew cask install alfred
 brew cask install dash
 brew cask install yujitach-menumeters
 brew cask install keycastr
