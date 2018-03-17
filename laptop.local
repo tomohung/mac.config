@@ -37,6 +37,7 @@ brew cask install alfred
 brew cask install dash
 brew cask install yujitach-menumeters
 brew cask install keycastr
+brew cask install google-backup-and-sync
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
