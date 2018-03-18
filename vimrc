@@ -87,6 +87,9 @@ let mapleader = " "
 " open vimrc
 nnoremap <Leader>vim :tabe $MYVIMRC<CR>
 
+" next line when insert mode
+imap <C-j> <ESC>o
+
 " turn off search highlight
 nnoremap <Leader>no :<C-u>nohlsearch<CR>
 " Switch between the last two files
