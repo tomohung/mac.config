@@ -88,8 +88,8 @@ let mapleader = " "
 " open vimrc
 nnoremap <Leader>vim :tabe $MYVIMRC<CR>
 
-" next line when insert mode
-imap <C-j> <ESC>o
+" next line when insert mode ; CAUSION: this overwrite default <C-o>
+imap <C-o> <ESC>o
 
 " turn off search highlight
 nnoremap <Leader>no :<C-u>nohlsearch<CR>
