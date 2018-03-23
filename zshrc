@@ -1,5 +1,5 @@
 source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
-    
+
 # Load the oh-my-zsh's library
 antigen use oh-my-zsh
 
@@ -11,7 +11,11 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle paulirish/git-open
 
 # Load the theme
-antigen theme ys
+# antigen theme ys
+
+# theme for pure, can't use antigen theme command directly
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 
 # Tell antigen that you're done
 antigen apply
