@@ -41,6 +41,7 @@ Plug 'janko-m/vim-test' " Run tests <leader>tn <leader>tf <leader>ts <leader>tl
 Plug 'tpope/vim-bundler' " gem install gem-catgs; gem ctags; will generate all tags from gemfile
 Plug 'jlanzarotta/bufexplorer' " BufExplorer <leader>be
 Plug 'vim-syntastic/syntastic' " syntax checking hacks
+Plug 'christoomey/vim-tmux-navigator' " vim-tmux navigation
 
 " Language specific
 Plug 'pangloss/vim-javascript'
