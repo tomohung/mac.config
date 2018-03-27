@@ -26,12 +26,16 @@ or neovim
 2. open vim
 3. `:PlugInstall` # not necessary for first time
 
-for tmux plugin manager
+#### Tmux Plugin Manager
 0. ln -s ~/.vim/tmux.conf ~/.tmux.conf
-1. $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-2. open tmux 
-3. `prefix + I` -> install plugin
+1. open tmux 
+2. `prefix + I` -> install plugin
 
-for ctags (elixir)
-0. ln -s ~/.vim/ctags ~/.ctags
+#### Enable copy at iTerm2
+If you have tmux 1.5 or newer and are using iTerm2 version 3 or newer then the y in copy-mode and mouse selection will work without tmux-yank.
+
+To enable this:
+1. Go into iTerm2's preferences.
+2. Go to the "General" tab.
+3. Check "Applications in terminal may access clipboard"
 
