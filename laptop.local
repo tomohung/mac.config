@@ -16,12 +16,16 @@ brew "mps-youtube"
 brew "mpv"
 brew "neovim"
 brew "chromedriver"
+brew "python"
 EOF
 
-brew upgrade python
+# install neovim
 pip3 install neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# install tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 brew cask install iterm2
 brew cask install launchrocket
