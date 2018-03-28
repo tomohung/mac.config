@@ -29,3 +29,5 @@ source /Users/tomohung/.asdf/asdf.sh
 
 # put local secret here
 source /Users/tomohung/.secret_key
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

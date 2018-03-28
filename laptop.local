@@ -17,6 +17,7 @@ brew "mpv"
 brew "neovim"
 brew "chromedriver"
 brew "python"
+brew "fzf"
 EOF
 
 # install neovim
