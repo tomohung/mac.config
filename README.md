@@ -26,10 +26,17 @@ or neovim
 2. open vim
 3. `:PlugInstall` # not necessary for first time
 
+## Tmux
 #### Tmux Plugin Manager
 0. ln -s ~/.vim/tmux.conf ~/.tmux.conf
 1. open tmux 
 2. `prefix + I` -> install plugin
+
+#### Auto start tmux in iTerm2
+Navigate to "Preferences > Profiles > PROFILE > Command > Send text at start" and set it to:
+```
+tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}
+```
 
 #### Enable copy at iTerm2
 If you have tmux 1.5 or newer and are using iTerm2 version 3 or newer then the y in copy-mode and mouse selection will work without tmux-yank.
