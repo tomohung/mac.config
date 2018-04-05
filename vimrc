@@ -51,10 +51,11 @@ Plug 'mattn/emmet-vim' " exapnding abbreviations html
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
-Plug 'michaeljsmith/vim-indent-object' "object as indent; > cii, cai
 Plug 'tpope/vim-endwise' " wisely add end in ruby/elixir and other languages
 Plug 'tpope/vim-rails' " :A/:R, :Emodel/:Eview/:Econtroller, :help rails-navigation, :help rails-:Extract
 runtime macros/matchit.vim "extend match, ex: in ruby, begin..end, if..end
+Plug 'kana/vim-textobj-user' " dependency for vim-textobj-ruby
+Plug 'nelstrom/vim-textobj-rubyblock' " vir/var
 
 call plug#end()
 
