@@ -28,6 +28,6 @@ export PATH="/usr/local/sbin:$PATH"
 source /Users/tomohung/.asdf/asdf.sh
 
 # put local secret here
-source /Users/tomohung/.secret_key
+source /Users/tomohung/.local.zshrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
