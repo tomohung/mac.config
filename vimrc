@@ -107,6 +107,7 @@ nnoremap <Leader><Tab> <C-^>
 nnoremap <Leader>/ :Ack!<Space>
 " Explore current directory
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <Leader>E :e.<CR>
 
 " vim-test mappings
 map <Leader>tn :TestNearest<CR>
