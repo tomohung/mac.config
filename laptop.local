@@ -44,6 +44,7 @@ brew cask install yujitach-menumeters
 brew cask install keycastr
 brew cask install google-backup-and-sync
 brew cask install typora
+brew cask install ngrok
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
