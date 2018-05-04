@@ -18,6 +18,7 @@ brew "neovim"
 brew "chromedriver"
 brew "python"
 brew "fzf"
+brew "bfg"
 EOF
 
 # install neovim

@@ -42,6 +42,8 @@ Plug 'tpope/vim-bundler' " gem install gem-catgs; gem ctags; will generate all t
 Plug 'jlanzarotta/bufexplorer' " BufExplorer <leader>be
 Plug 'vim-syntastic/syntastic' " syntax checking hacks
 Plug 'christoomey/vim-tmux-navigator' " vim-tmux navigation
+Plug 'rizzatti/dash.vim' "<leader>d
+Plug 'ruanyl/vim-gh-line' " <leader>gh
 
 " Language specific
 Plug 'pangloss/vim-javascript'
@@ -77,8 +79,8 @@ set ignorecase " case insensitive"
 set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
 set autoread
 set path+=** " :find search down into subfolders
-set noswapfile " no swap file
-set nobackup
+" set noswapfile " no swap file
+" set nobackup
 set updatetime=500 " update status like git-gutter by ms
 
 autocmd! BufWritePost .vimrc,vimrc source $MYVIMRC | redraw " reload after save vimrc
@@ -121,8 +123,6 @@ nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gb :Gblame<CR>
-nnoremap <Leader>gh :Silent Glog<CR>
-nnoremap <Leader>gH :Silent Glog<CR>:set nofoldenable<CR>
 nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit -v -q<CR>
@@ -138,6 +138,9 @@ nmap <silent> <leader>q :call ToggleList("Quickfix List", 'c')<CR>
 " expand %% as current directory in command mode
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+" Dash
+nnoremap <silent> <leader>d <Plug>DashSearch
+
 """ Plugin Config
 " For netrw
 " let g:netrw_banner = 0 " turn off banner
@@ -152,8 +155,9 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" make test commands execute using dispatch.vim
+" vim-test make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
+let test#ruby#rspec#executable = 'make rspec'
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
