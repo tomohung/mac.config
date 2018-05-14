@@ -158,6 +158,9 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+" Ctrl P
+let g:ctrlp_show_hidden = 1
+
 " vim-test make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
 let test#ruby#rspec#executable = 'make rspec'
