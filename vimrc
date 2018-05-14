@@ -87,6 +87,9 @@ autocmd! BufWritePost .vimrc,vimrc source $MYVIMRC | redraw " reload after save 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
+" auto trim trailing white space
+autocmd BufWritePre *.* :%s/\s\+$//e
+
 " zoom a vim pane, <C-w>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
