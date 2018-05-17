@@ -107,7 +107,11 @@ let mapleader = " "
 nnoremap <Leader>vim :tabe $MYVIMRC<CR>
 
 " next line when insert mode ; CAUSION: this overwrite default <C-o>
-imap <C-o> <ESC>o
+inoremap <C-o> <ESC>o
+
+" insert mode move to begin/end
+inoremap <C-a> <ESC>I
+inoremap <C-e> <ESC>A
 
 " turn off search highlight
 nnoremap <Leader>no :<C-u>nohlsearch<CR>
