@@ -82,6 +82,10 @@ set path+=** " :find search down into subfolders
 " set noswapfile " no swap file
 " set nobackup
 set updatetime=500 " update status like git-gutter by ms
+if has('persistent_undo')      "check if your vim version supports it
+  set undofile                 "turn on the feature
+  set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+endif
 
 autocmd! BufWritePost .vimrc,vimrc source $MYVIMRC | redraw " reload after save vimrc
 " automatically rebalance windows on vim resize
