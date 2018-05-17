@@ -24,6 +24,7 @@ Plug 'tpope/vim-surround' " cs<origin><new>/ds/cst/ys/<v-block>S<new>
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
 Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n
 Plug 'easymotion/vim-easymotion' "<leader><leader>w
+Plug 'junegunn/vim-easy-align' "vipga= / gaip=
 
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
@@ -147,6 +148,13 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Dash
 nnoremap <silent> <leader>d <Plug>DashSearch
+
+" EasyAlign
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 
 """ Plugin Config
 " For netrw
