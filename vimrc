@@ -140,6 +140,7 @@ nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit -v -q<CR>
 nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gl :Git pull<CR>
 
 " tagbar toggle
 nmap <Leader>tt :TagbarToggle<CR>
