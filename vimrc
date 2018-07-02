@@ -22,9 +22,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary' " gc/gcc
 Plug 'tpope/vim-surround' " cs<origin><new>/ds/cst/ys/<v-block>S<new>
 Plug 'tpope/vim-repeat' " Use the repeat command (.) with supported plugins
-Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n
+Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n / cox(toggle cursor column)
 Plug 'easymotion/vim-easymotion' "<leader><leader>w
 Plug 'junegunn/vim-easy-align' "vipga= / gaip=
+Plug 'vim-scripts/BufOnly.vim' "<leader>bo :BufOnly clean all buffers but the current one
 
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
@@ -44,7 +45,7 @@ Plug 'jlanzarotta/bufexplorer' " BufExplorer <leader>be
 Plug 'vim-syntastic/syntastic' " syntax checking hacks
 Plug 'christoomey/vim-tmux-navigator' " vim-tmux navigation
 Plug 'rizzatti/dash.vim' "<leader>d
-Plug 'ruanyl/vim-gh-line' " <leader>gh
+Plug 'ruanyl/vim-gh-line' " <leader>gh open code on github
 
 " Language specific
 Plug 'pangloss/vim-javascript'
@@ -71,7 +72,7 @@ set shiftwidth=2
 set tabstop=2 " number of visual spaces per TAB
 set expandtab " tabs are spaces
 set number " show line numbers
-set cursorline " highlight current line
+" set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
 set hlsearch
@@ -88,6 +89,7 @@ if has('persistent_undo')      "check if your vim version supports it
   set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 endif
 set clipboard=unnamed  "copy to clipboard when yank
+set lazyredraw " well, still need this to prevent slow render in ruby
 
 autocmd! BufWritePost .vimrc,vimrc source $MYVIMRC | redraw " reload after save vimrc
 " automatically rebalance windows on vim resize
@@ -101,7 +103,7 @@ nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
 """ Key Mapping
-"space as leader, Spacemacs-stype
+"space as leader, Spacemacs-style
 let mapleader = " "
 
 " open vimrc
@@ -121,8 +123,11 @@ nnoremap <Leader><Tab> <C-^>
 " Ack
 nnoremap <Leader>/ :Ack!<Space>
 " Explore current directory
-nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR><CR>
 nnoremap <Leader>E :e.<CR>
+
+" Only keep current window
+nnoremap <Leader>on :only<CR>
 
 " vim-test mappings
 map <Leader>tn :TestNearest<CR>
@@ -161,6 +166,8 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" BufOnly
+nnoremap <silent> <leader>bo :BufOnly<CR>
 
 """ Plugin Config
 " For netrw
@@ -169,6 +176,7 @@ nmap ga <Plug>(EasyAlign)
 " airline
 let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
 let g:airline#extensions#tagbar#enabled = 0
+autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
 " let g:airline_powerline_fonts = 1 " enable powerline special glyph fonts
 
 " set ag with Ack
@@ -187,7 +195,7 @@ let test#ruby#rspec#executable = 'make rspec'
 let g:deoplete#enable_at_startup = 1
 
 " ruby-vim indentation styles; normal/indent/outdent
-let g:ruby_indent_access_modifier_style = 'indent'
+" let g:ruby_indent_access_modifier_style = 'indent'
 
 " UltiSnips Trigger config
 let g:UltiSnipsExpandTrigger="<tab>"
