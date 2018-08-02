@@ -169,6 +169,9 @@ nmap ga <Plug>(EasyAlign)
 " BufOnly
 nnoremap <silent> <leader>bo :BufOnly<CR>
 
+" Ctags
+nmap <Leader>tag :Ctags<CR>
+
 """ Plugin Config
 " For netrw
 " let g:netrw_banner = 0 " turn off banner
