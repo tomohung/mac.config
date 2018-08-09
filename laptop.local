@@ -19,6 +19,7 @@ brew "chromedriver"
 brew "python"
 brew "fzf"
 brew "bfg"
+brew "git-recent"
 EOF
 
 # install neovim
