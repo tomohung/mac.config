@@ -27,6 +27,14 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 source /Users/tomohung/.asdf/asdf.sh
 
+# Alias
+
+# git fetch and reset to origin branch
+gfgro() {
+  [[ "$#" != 1 ]] && local b="$(git_current_branch)"
+  git fetch && git reset --hard origin/"${b:=$1}"
+}
+
 # put local secret here
 source /Users/tomohung/.local.zshrc
 
