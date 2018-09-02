@@ -35,6 +35,8 @@ gfgro() {
   git fetch && git reset --hard origin/"${b:=$1}"
 }
 
+alias gfgrbi='gf && grbi'
+
 # put local secret here
 source /Users/tomohung/.local.zshrc
 
