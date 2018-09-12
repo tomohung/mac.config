@@ -5,7 +5,7 @@
 https://github.com/thoughtbot/laptop
 1. curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
 ### custom installation
-2. ln -s ~/mac-config/laptop.local ~/.laptop.local
+2. ln -s ~/mac.config/laptop.local ~/.laptop.local
 ### Update Mac
 3. sh mac 2>&1 | tee ~/laptop.log
 
