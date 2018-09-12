@@ -30,7 +30,7 @@ or neovim
 
 ## Tmux
 #### Tmux Plugin Manager
-0. ln -s ~/.vim/tmux.conf ~/.tmux.conf
+0. ln -s ~/mac.config/tmux.conf ~/.tmux.conf
 1. open tmux 
 2. `prefix + I` -> install plugin
 
