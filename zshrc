@@ -25,7 +25,7 @@ export PATH="$HOME/.bin:$PATH"
 # recommended by brew doctor
 # export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-source /Users/tomohung/.asdf/asdf.sh
+source ~/.asdf/asdf.sh
 
 # Alias
 
@@ -38,6 +38,7 @@ gfgro() {
 alias gfgrbi='gf && grbi'
 
 # put local secret here
-source /Users/tomohung/.local.zshrc
+source ~/.local.zshrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
