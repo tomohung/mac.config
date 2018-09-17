@@ -46,6 +46,8 @@ brew cask install keycastr
 brew cask install google-backup-and-sync
 brew cask install typora
 brew cask install ngrok
+brew cask install notion
+brew cask install dbeaver
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
