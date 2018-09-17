@@ -13,26 +13,26 @@ brew "htop"
 brew "mps-youtube"
 brew "mpv"
 brew "neovim"
-brew "chromedriver"
 brew "python"
 brew "fzf"
-brew "bfg"
 brew "git-recent"
 brew "bat"
 EOF
 
 # install neovim
-# pip3 install neovim
-# curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+pip3 install neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install tmux plugin manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [ ! -d ~/.tmux/plugins ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
+brew cask install chromedriver
 brew cask install iterm2
 brew cask install launchrocket
 brew cask install shiftit
-brew cask install docker-toolbox
 brew cask install google-chrome
 brew cask install slack
 brew cask install skitch
@@ -51,23 +51,3 @@ fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
 brew cask cleanup
 
-default_docker_machine() {
-  docker-machine ls | grep -Fq "default"
-}
-
-if ! default_docker_machine; then
-  docker-machine create --driver virtualbox default
-fi
-
-default_docker_machine_running() {
-  default_docker_machine | grep -Fq "Running"
-}
-
-if ! default_docker_machine_running; then
-  docker-machine start default
-fi
-
-if [ -r "$HOME/.rcrc" ]; then
-  fancy_echo "Updating dotfiles ..."
-  rcup
-fi

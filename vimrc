@@ -37,8 +37,8 @@ if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'SirVer/ultisnips' " Track the engine.
-Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
+" Plug 'SirVer/ultisnips' " Track the engine.
+" Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
 Plug 'janko-m/vim-test' " Run tests <leader>tn <leader>tf <leader>ts <leader>tl
 Plug 'tpope/vim-bundler' " gem install gem-catgs; gem ctags; will generate all tags from gemfile
 Plug 'jlanzarotta/bufexplorer' " BufExplorer <leader>be
@@ -223,6 +223,10 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 let g:ale_linters = {'ruby': ['rubocop']}
 " let g:ale_ruby_rubocop_executable = 'bundle'
+
+" gh-line
+let g:gh_line_blame_map_default = 0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
