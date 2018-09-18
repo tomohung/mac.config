@@ -20,7 +20,7 @@ make sure iTerm is using zsh, then close iTerm and open again will automatical u
 ## vim config is built from scratch!
 vim plugin manager switch to vim-plug, it's much simpler.
 
-1. $ ln -s ~/mac.config/vimrc ~/.vimrc 
+1. $ ln -s ~/mac.config/vimrc ~/.vimrc
 
 or neovim
    $ ln -s ~/mac.config/vimrc ~/.config/nvim/init.vim
@@ -31,7 +31,7 @@ or neovim
 ## Tmux
 #### Tmux Plugin Manager
 0. ln -s ~/mac.config/tmux.conf ~/.tmux.conf
-1. open tmux 
+1. open tmux
 2. `prefix + I` -> install plugin
 
 #### Auto start tmux in iTerm2
@@ -48,3 +48,9 @@ To enable this:
 2. Go to the "General" tab.
 3. Check "Applications in terminal may access clipboard"
 
+#### fzf
+
+Enable key bindings
+```
+$(brew --prefix)/opt/fzf/install
+```
