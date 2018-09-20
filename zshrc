@@ -37,6 +37,11 @@ gfgro() {
 
 alias gfgrbi='gf && grbi'
 
+esdeploy() {
+  echo "deploy: from $(git_current_branch) to deploy/$1"
+  git push -f origin "$(git_current_branch):deploy/$1"
+}
+
 # put local secret here
 source ~/.local.zshrc
 
