@@ -38,7 +38,7 @@ gfgro() {
 alias gfgrbi='gf && grbi'
 
 esdeploy() {
-  echo "deploy: from $(git_current_branch) to deploy/$1"
+  echo "deploy: $(git_current_branch) -> origin/deploy/$1"
   git push -f origin "$(git_current_branch):deploy/$1"
 }
 
