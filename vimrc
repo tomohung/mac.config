@@ -36,7 +36,9 @@ Plug 'majutsushi/tagbar' " display tags in a winsow
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 " Plug 'SirVer/ultisnips' " Track the engine.
 " Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
 Plug 'janko-m/vim-test' " Run tests <leader>tn <leader>tf <leader>ts <leader>tl
@@ -191,6 +193,9 @@ nmap <Leader>tag :Ctags<CR>
 " For netrw
 " let g:netrw_banner = 0 " turn off banner
 
+" FZF
+nnoremap <c-p> :Files<CR>
+
 " airline
 let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
 let g:airline#extensions#tagbar#enabled = 0
@@ -203,7 +208,7 @@ if executable('ag')
 endif
 
 " Ctrl P
-let g:ctrlp_show_hidden = 1
+" let g:ctrlp_show_hidden = 1
 
 " vim-test make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
