@@ -15,8 +15,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'tomasiser/vim-code-dark' " theme
-Plug 'vim-airline/vim-airline' " better status bar
-
+" Plug 'vim-airline/vim-airline' " better status bar
+Plug 'itchyny/lightline.vim' " better status bar
 " Basic operation
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary' " gc/gcc
@@ -197,13 +197,24 @@ nmap <Leader>tag :Ctags<CR>
 " FZF
 nnoremap <c-p> :Files<CR>
 nnoremap <c-b> :Buffers<CR>
+nnoremap <c-m> :History<CR>
 
 " airline
-let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
-let g:airline#extensions#tagbar#enabled = 0
-autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
+" let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
+" let g:airline#extensions#tagbar#enabled = 0
+" autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
 " let g:airline_powerline_fonts = 1 " enable powerline special glyph fonts
 
+" lightline
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 " set ag with Ack
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
