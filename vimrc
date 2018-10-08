@@ -197,7 +197,7 @@ nmap <Leader>tag :Ctags<CR>
 " FZF
 nnoremap <c-p> :Files<CR>
 nnoremap <c-b> :Buffers<CR>
-nnoremap <c-m> :History<CR>
+" nnoremap <c-m> :History<CR>
 
 " airline
 " let g:airline#extensions#tabline#enabled = 1 " turn on tabline for buffers
