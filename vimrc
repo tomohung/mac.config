@@ -55,7 +55,7 @@ Plug 'ruanyl/vim-gh-line' " <leader>gh open code on github
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'elixir-editors/vim-elixir'
-Plug 'mattn/emmet-vim' " exapnding abbreviations html
+" Plug 'mattn/emmet-vim' " exapnding abbreviations html
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'  "]m ]M [m [M ]] [[ [] am/im/aM/iM
@@ -236,9 +236,9 @@ let g:deoplete#auto_complete_delay = 200
 let g:ruby_indent_block_style = 'do'
 
 " UltiSnips Trigger config
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 let g:ale_linters = {'ruby': ['rubocop']}
 " let g:ale_ruby_rubocop_executable = 'bundle'
