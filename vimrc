@@ -26,6 +26,7 @@ Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n / cox(toggle 
 Plug 'easymotion/vim-easymotion' "<leader><leader>w
 Plug 'junegunn/vim-easy-align' "vipga= / gaip=
 Plug 'vim-scripts/BufOnly.vim' "<leader>bo :BufOnly clean all buffers but the current one
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
@@ -75,7 +76,7 @@ filetype plugin indent on " load filetype-specific indnet files and plugin
 set shiftwidth=2
 set tabstop=2 " number of visual spaces per TAB
 set expandtab " tabs are spaces
-set number " show line numbers
+set number relativenumber " show line numbers
 set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
