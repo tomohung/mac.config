@@ -50,6 +50,7 @@ brew cask install notion
 brew cask install dbeaver-community
 brew cask install postman
 brew cask install 1password
+brew cask install github
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
