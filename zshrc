@@ -35,9 +35,13 @@ gfgro() {
   git fetch && git reset --hard origin/"${b:=$1}"
 }
 
-alias gfgrbi='gf && grbi'
+alias glgrbi='gl && grbi'
 
-esdeploy() {
+deploy() {
+  echo "deploy: $(git_current_branch) -> origin/deploy/$1"
+  git push origin "$(git_current_branch):deploy/$1"
+}
+fdeploy() {
   echo "deploy: $(git_current_branch) -> origin/deploy/$1"
   git push -f origin "$(git_current_branch):deploy/$1"
 }
