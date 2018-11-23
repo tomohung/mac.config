@@ -35,7 +35,7 @@ gfgro() {
   git fetch && git reset --hard origin/"${b:=$1}"
 }
 
-alias glgrbi='gl && grbi'
+alias gfgrbi='gf && grbi'
 
 deploy() {
   echo "deploy: $(git_current_branch) -> origin/deploy/$1"
