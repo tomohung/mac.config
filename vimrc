@@ -127,6 +127,7 @@ nnoremap <Leader>no :<C-u>nohlsearch<CR>
 nnoremap <Leader><Tab> <C-^>
 " Ack
 nnoremap <Leader>/ :Ack!<Space>
+nnoremap <Leader>? :Ack! -Q<Space>
 " Explore current directory
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR><CR>
 nnoremap <Leader>E :e.<CR>
