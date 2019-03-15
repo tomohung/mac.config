@@ -9,6 +9,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle paulirish/git-open
+antigen bundle tmuxinator
 
 # Load the theme
 # antigen theme ys
