@@ -29,6 +29,10 @@ if [ ! -d ~/.tmux/plugins ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
+# Install tmuxinator
+brew tap nexeck/homebrew-tmuxinator
+brew install nexeck/homebrew-tmuxinator/tmuxinator
+
 brew cask install chromedriver
 brew cask install iterm2
 brew cask install launchrocket
