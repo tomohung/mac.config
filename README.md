@@ -40,6 +40,16 @@ Navigate to "Preferences > Profiles > PROFILE > Command > Send text at start" an
 tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}
 ```
 
+or use Tmuxinator template
+```
+ln -s ~/mac.config/tmuxinator ~/.config/tmuxinator
+```
+
+Navigate to "Preferences > Profiles > PROFILE > Command > Send text at start" and set it to:
+```
+txs easyship
+```
+
 #### Enable copy at iTerm2
 If you have tmux 1.5 or newer and are using iTerm2 version 3 or newer then the y in copy-mode and mouse selection will work without tmux-yank.
 
