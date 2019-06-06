@@ -47,6 +47,28 @@ fdeploy() {
   git push -f origin "$(git_current_branch):deploy/$1"
 }
 
+gmerge() {
+  local b="$(git_current_branch)"
+  echo "PR: $1 merge into the branch: ${b}"
+  hub pr checkout $1 && \
+  grbi ${b} && \
+  ggfl && \
+  gco ${b} && \
+  hub merge https://github.com/easyship/easyship-api/pull/$1 && \
+  gp
+}
+
+# array=(1234 2345)
+# bgmerge "${array[@]}"
+bgmerge() {
+  arr=("$@")
+  echo "PRs: ${arr}"
+	for i in "${arr[@]}"
+	do
+    gmerge $i || { echo 'merge failed' ; exit 1; }
+	done
+}
+
 # put local secret here
 source ~/.local.zshrc
 
