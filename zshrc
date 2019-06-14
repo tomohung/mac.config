@@ -51,7 +51,7 @@ gmerge() {
   local b="$(git_current_branch)"
   echo "PR: $1 merge into the branch: ${b}"
   hub pr checkout $1 && \
-  grbi ${b} && \
+  git rebase -i ${b} && \
   ggfl && \
   gco ${b} && \
   hub merge https://github.com/easyship/easyship-api/pull/$1 && \
