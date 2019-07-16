@@ -23,10 +23,15 @@ antigen apply
 
 export PATH="$HOME/.bin:$PATH"
 
+# avoid warnings https://discourse.brew.sh/t/failed-to-set-locale-category-lc-numeric-to-en-ru/5092/10
+export LC_ALL=en_US.UTF-8
+
 # recommended by brew doctor
 # export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-source ~/.asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 
 # Alias
 
@@ -65,7 +70,7 @@ bgmerge() {
   echo "PRs: ${arr}"
 	for i in "${arr[@]}"
 	do
-    gmerge $i || { echo 'merge failed' ; exit 1; }
+    gmerge $i || { echo 'merge failed' ; exit 0; }
 	done
 }
 
