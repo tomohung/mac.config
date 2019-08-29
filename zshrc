@@ -32,6 +32,14 @@ export PATH="/usr/local/sbin:$PATH"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# put local secret here
+source ~/.local.zshrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -U -g ""'
+
+export EDITOR='vim'
 
 # Alias
 
@@ -58,9 +66,9 @@ gmerge() {
   hub pr checkout $1 && \
   git rebase -i ${b} && \
   ggfl && \
-  gco ${b} && \
+  git checkout ${b} && \
   hub merge https://github.com/easyship/easyship-api/pull/$1 && \
-  gp
+  git push
 }
 
 # array=(1234 2345)
@@ -70,16 +78,7 @@ bgmerge() {
   echo "PRs: ${arr}"
 	for i in "${arr[@]}"
 	do
-    gmerge $i || { echo 'merge failed' ; exit 0; }
+    gmerge $i || { echo 'merge failed' ; return; }
 	done
 }
-
-# put local secret here
-source ~/.local.zshrc
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -U -g ""'
-
-export EDITOR='vim'
 
