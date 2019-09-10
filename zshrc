@@ -85,4 +85,5 @@ bgmerge() {
 gDelete() {
   git checkout develop
   git branch | grep -v "develop" | grep -v "master" | xargs git branch -D
+  git prune
 }
