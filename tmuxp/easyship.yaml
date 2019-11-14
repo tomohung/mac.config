@@ -1,0 +1,23 @@
+session_name: default
+windows:
+- focus: 'true'
+  layout: 0110,238x55,0,0{144x55,0,0,0,93x55,145,0[93x27,145,0,1,93x27,145,28,4]}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - nvim
+  - focus: 'true'
+    shell_command:
+    - zsh
+  start_directory: /Users/tomo/easyship/easyship-api
+  window_name: api
+- layout: 3c36,238x55,0,0{139x55,0,0,2,98x55,140,0,3}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: nvim
+  - zsh
+  start_directory: /Users/tomo/easyship/easyship-rates
+  window_name: rates

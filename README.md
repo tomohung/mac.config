@@ -40,14 +40,17 @@ Navigate to "Preferences > Profiles > PROFILE > Command > Send text at start" an
 tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}
 ```
 
-or use Tmuxinator template
+or use Tmuxp template
+
+install `pip install tmuxp`
+
 ```
-ln -s ~/mac.config/tmuxinator ~/.config/tmuxinator
+ln -s ~/mac.config/tmuxp ~/.config/tmuxp
 ```
 
 Navigate to "Preferences > Profiles > PROFILE > Command > Send text at start" and set it to:
 ```
-txs easyship
+tmuxp load easyship
 ```
 
 #### Enable copy at iTerm2
