@@ -87,3 +87,5 @@ gDelete() {
   git branch | grep -v "develop" | grep -v "master" | xargs git branch -D
   git prune
 }
+
+alias pr='hub pr checkout'
