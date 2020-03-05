@@ -10,8 +10,6 @@ brew "mongodb"
 brew "tree"
 brew "diff-so-fancy"
 brew "htop"
-brew "mps-youtube"
-brew "mpv"
 brew "neovim"
 brew "python"
 brew "fzf"
@@ -29,13 +27,8 @@ if [ ! -d ~/.tmux/plugins ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
-# Install tmuxinator
-brew tap nexeck/homebrew-tmuxinator
-brew install nexeck/homebrew-tmuxinator/tmuxinator
-
 brew cask install chromedriver
 brew cask install iterm2
-brew cask install launchrocket
 brew cask install shiftit
 brew cask install google-chrome
 brew cask install slack
@@ -46,7 +39,6 @@ brew cask install nally
 brew cask install alfred
 brew cask install dash
 brew cask install yujitach-menumeters
-brew cask install keycastr
 brew cask install google-backup-and-sync
 brew cask install typora
 brew cask install ngrok
