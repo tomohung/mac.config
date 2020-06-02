@@ -57,7 +57,7 @@ deploy() {
 }
 fdeploy() {
   echo "deploy: $(git_current_branch) -> origin/deploy/$1"
-  git push -f origin "$(git_current_branch):deploy/$1"
+  git push --force-with-lease origin "$(git_current_branch):deploy/$1"
 }
 
 gmerge() {
