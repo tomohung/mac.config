@@ -26,7 +26,7 @@ Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n / cox(toggle 
 Plug 'easymotion/vim-easymotion' "<leader><leader>w
 Plug 'junegunn/vim-easy-align' "vipga= / gaip=
 Plug 'vim-scripts/BufOnly.vim' "<leader>bo :BufOnly clean all buffers but the current one
-" Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
