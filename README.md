@@ -67,3 +67,8 @@ Enable key bindings
 ```
 $(brew --prefix)/opt/fzf/install
 ```
+
+#### RubyMine
+```
+ln -s ~/mac.config/ideavimrc ~/.ideavimrc
+```
