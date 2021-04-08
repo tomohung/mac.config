@@ -22,6 +22,7 @@ set number
 set ignorecase " case insensitive"
 set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
 set gdefault " the :substitute flag 'g' is by default
+set clipboard+=unnamed
 
 """ Idea specific settings ------------------
 set ideajoin
