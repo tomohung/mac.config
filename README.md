@@ -72,3 +72,9 @@ $(brew --prefix)/opt/fzf/install
 ```
 ln -s ~/mac.config/ideavimrc ~/.ideavimrc
 ```
+
+##### Install intellimacs
+
+```
+git clone https://github.com/MarcoIeni/intellimacs ~/.intellimacs
+```
