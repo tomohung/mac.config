@@ -31,12 +31,22 @@ set ideajoin
 
 " Select Intellimacs modules"
 source ~/.intellimacs/spacemacs.vim
-source ~/.intellimacs/extra.vim
-source ~/.intellimacs/major.vim
-source ~/.intellimacs/hybrid.vim
+" source ~/.intellimacs/extra.vim
+" source ~/.intellimacs/major.vim
+" source ~/.intellimacs/hybrid.vim
 
 " Comma for major mode
 nmap , <leader>m
 vmap , <leader>m
 
 """ Mappings --------------------------------
+nnoremap <leader>gb :action Annotate<CR>
+
+" turn off search highlight
+nnoremap <leader>no :<C-u>nohlsearch<CR>
+
+nnoremap <leader>cf :action CopyReference<CR>
+
+nnoremap <leader>tn :action Run<CR>
+
+nnoremap <leader>gh :action Github.OpenOnGithub<CR>
