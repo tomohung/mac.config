@@ -27,7 +27,7 @@ set commentary
 
 """ Common settings -------------------------
 set showmode
-set scrolloff=2
+set scrolloff=1
 set hlsearch
 set incsearch
 set number
@@ -40,7 +40,6 @@ set clipboard+=unnamed
 set ideajoin
 " set ideastatusicon=gray
 " set idearefactormode=keep
-
 
 """ Mappings --------------------------------
 " https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
@@ -62,7 +61,7 @@ vnoremap <leader>tl :action Rerun<CR>
 nnoremap <leader>tn :action RunClass<CR>
 vnoremap <leader>tn :action RunClass<CR>
 
-nnoremap <leader>no :noh<CR>
+nnoremap <leader>no :<C-u>nohlsearch<CR>
 
 nnoremap <leader>rf :action ReformatCode<CR><ESC>
 vnoremap <leader>rf :action ReformatCode<CR><ESC>
