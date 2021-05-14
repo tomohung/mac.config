@@ -1,6 +1,18 @@
 """ Map leader to space ---------------------
 let mapleader=" "
 
+" Comma for major mode
+nmap , <leader>m
+vmap , <leader>m
+
+" Select Intellimacs modules"
+" source ~/.intellimacs/spacemacs.vim
+
+" (Optional) Enable other Intellimacs modules
+" source ~/.intellimacs/extra.vim
+" source ~/.intellimacs/major.vim
+" source ~/.intellimacs/hybrid.vim
+
 """ Plugins  --------------------------------
 set surround
 set multiple-cursors
@@ -29,14 +41,28 @@ set ideajoin
 " set ideastatusicon=gray
 " set idearefactormode=keep
 
-" Select Intellimacs modules"
-source ~/.intellimacs/spacemacs.vim
-source ~/.intellimacs/extra.vim
-source ~/.intellimacs/major.vim
-source ~/.intellimacs/hybrid.vim
-
-" Comma for major mode
-nmap , <leader>m
-vmap , <leader>m
 
 """ Mappings --------------------------------
+" https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+nnoremap <leader>gb :action Annotate<CR>
+vnoremap <leader>gb :action Annotate<CR>
+
+nnoremap <leader>cf :action CopyReference<CR>
+vnoremap <leader>cf :action CopyReference<CR>
+
+nnoremap <leader>tt :action GotoTest<CR>
+vnoremap <leader>tt :action GotoTest<CR>
+
+nnoremap <leader>gh :action Github.Open.In.Browser<CR>
+vnoremap <leader>gh :action Github.Open.In.Browser<CR>
+
+nnoremap <leader>tl :action Rerun<CR>
+vnoremap <leader>tl :action Rerun<CR>
+
+nnoremap <leader>tn :action RunClass<CR>
+vnoremap <leader>tn :action RunClass<CR>
+
+nnoremap <leader>no :noh<CR>
+
+nnoremap <leader>rf :action ReformatCode<CR><ESC>
+vnoremap <leader>rf :action ReformatCode<CR><ESC>
