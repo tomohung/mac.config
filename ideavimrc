@@ -65,3 +65,9 @@ nnoremap <leader>no :<C-u>nohlsearch<CR>
 
 nnoremap <leader>rf :action ReformatCode<CR><ESC>
 vnoremap <leader>rf :action ReformatCode<CR><ESC>
+
+nnoremap <leader>/  yiw :action FindInPath<CR>
+vnoremap <leader>/  :action FindInPath<CR>
+
+nnoremap <leader><Tab> <C-S-6>
+vnoremap <leader><Tab> <Esc><C-S-6>
