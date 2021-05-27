@@ -76,7 +76,7 @@ filetype plugin indent on " load filetype-specific indnet files and plugin
 set shiftwidth=2
 set tabstop=2 " number of visual spaces per TAB
 set expandtab " tabs are spaces
- set number " relativenumber " show line numbers
+set number " relativenumber " show line numbers
 set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
