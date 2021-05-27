@@ -63,11 +63,10 @@ vnoremap <leader>tn :action RunClass<CR>
 
 nnoremap <leader>no :<C-u>nohlsearch<CR>
 
-nnoremap <leader>rf :action ReformatCode<CR><ESC>
-vnoremap <leader>rf :action ReformatCode<CR><ESC>
+nnoremap <leader>rf :action ReformatCode<CR>
+vnoremap <leader>rf:action ReformatCode<CR>
 
 nnoremap <leader>/  yiw :action FindInPath<CR>
-
 vnoremap <leader>/  :action FindInPath<CR>
 
 nnoremap <leader><Tab> <C-S-6>
@@ -83,3 +82,9 @@ nnoremap ]<space>    o<Esc>k
 vnoremap ]<space>    <Esc>o<Esc>k
 nnoremap [<space>    O<Esc>
 vnoremap [<space>    <Esc>O<Esc>
+
+nnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
+vnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
+
+nnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
+vnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
