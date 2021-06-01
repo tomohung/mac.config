@@ -2,8 +2,8 @@
 let mapleader=" "
 
 " Comma for major mode
-nmap , <leader>m
-vmap , <leader>m
+" nmap , <leader>m
+" vmap , <leader>m
 
 " Select Intellimacs modules"
 " source ~/.intellimacs/spacemacs.vim
@@ -14,9 +14,11 @@ vmap , <leader>m
 " source ~/.intellimacs/hybrid.vim
 
 """ Plugins  --------------------------------
-set surround
-set multiple-cursors
+" set surround
+" set multiple-cursors
 set commentary
+set NERDTree
+
 " set argtextobj
 " set easymotion
 " set textobj-entire
@@ -60,6 +62,12 @@ vnoremap <leader>tl :action Rerun<CR>
 
 nnoremap <leader>tn :action RunClass<CR>
 vnoremap <leader>tn :action RunClass<CR>
+
+nnoremap <leader>dd :action DebugClass<CR>
+vnoremap <leader>dd :action DebugClass<CR>
+
+nnoremap <leader>dm :action ToggleLineBreakpoint<CR>
+vnoremap <leader>dm :action ToggleLineBreakpoint<CR>
 
 nnoremap <leader>no :<C-u>nohlsearch<CR>
 
