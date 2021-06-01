@@ -20,7 +20,7 @@ set commentary
 set NERDTree
 
 " set argtextobj
-" set easymotion
+set easymotion
 " set textobj-entire
 " set ReplaceWithRegister
 
