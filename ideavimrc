@@ -14,18 +14,13 @@ let mapleader=" "
 " source ~/.intellimacs/hybrid.vim
 
 """ Plugins  --------------------------------
-" set surround
-" set multiple-cursors
+set surround
 set commentary
 set NERDTree
-
-" set argtextobj
 set easymotion
-" set textobj-entire
-" set ReplaceWithRegister
+" set multiple-cursors
 
 """ Plugin settings -------------------------
-" let g:argtextobj_pairs="[:],(:),<:>"
 
 """ Common settings -------------------------
 set showmode
