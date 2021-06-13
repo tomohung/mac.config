@@ -43,8 +43,12 @@ set ideajoin
 nnoremap <leader>gb :action Annotate<CR>
 vnoremap <leader>gb :action Annotate<CR>
 
-nnoremap <leader>cf :action CopyReference<CR>
-vnoremap <leader>cf :action CopyReference<CR>
+nnoremap <leader>cf :action CopyPathWithLineNumber<CR>
+vnoremap <leader>cf :action CopyPathWithLineNumber<CR>
+
+nnoremap <leader>e :action SelectInProjectView<CR>
+vnoremap <leader>e :action SelectInProjectView<CR>
+
 
 nnoremap <leader>tt :action GotoTest<CR>
 vnoremap <leader>tt :action GotoTest<CR>
@@ -66,8 +70,8 @@ vnoremap <leader>dm :action ToggleLineBreakpoint<CR>
 
 nnoremap <leader>no :<C-u>nohlsearch<CR>
 
-nnoremap <leader>rf :action ReformatCode<CR>
-vnoremap <leader>rf:action ReformatCode<CR>
+nnoremap <leader>= :action ReformatCode<CR>
+vnoremap <leader>= :action ReformatCode<CR>
 
 nnoremap <leader>/  yiw :action FindInPath<CR>
 vnoremap <leader>/  :action FindInPath<CR>
