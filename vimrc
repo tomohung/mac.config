@@ -39,6 +39,7 @@ if has('nvim')
 endif
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Plug 'SirVer/ultisnips' " Track the engine.
 " Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
@@ -231,7 +232,7 @@ let test#ruby#rspec#executable = 'make rspec'
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 200
+" let g:deoplete#auto_complete_delay = 200
 
 " ruby-vim indentation styles; normal/indent/outdent
 " let g:ruby_indent_access_modifier_style = 'indent'
