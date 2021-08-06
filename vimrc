@@ -26,7 +26,7 @@ Plug 'tpope/vim-unimpaired' " ]q/ ]b/ ]<space>/ ]e/ ]x/ ]u/ ]f/ ]n / cox(toggle 
 Plug 'easymotion/vim-easymotion' "<leader><leader>w
 Plug 'junegunn/vim-easy-align' "vipga= / gaip=
 Plug 'vim-scripts/BufOnly.vim' "<leader>bo :BufOnly clean all buffers but the current one
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+" Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Tools
 Plug 'mileszs/ack.vim' " :Ack/:Ack!/:AckAdd/:AckFromSearch/:AckFile
@@ -243,7 +243,11 @@ let g:ruby_indent_block_style = 'do'
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
 " let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
-let g:ale_linters = {'ruby': ['rubocop']}
+let g:ale_linters = {'ruby': ['standardrb']}
+let g:ale_fixers = {'ruby': ['standardrb']}
+let g:ruby_indent_assignment_style = 'variable'
+
+" let g:ale_linters = {'ruby': ['rubocop']}
 " let g:ale_ruby_rubocop_executable = 'bundle'
 
 " gh-line
