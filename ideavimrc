@@ -53,6 +53,9 @@ vnoremap <leader>e :action SelectInProjectView<CR>
 nnoremap <leader>tt :action GotoTest<CR>
 vnoremap <leader>tt :action GotoTest<CR>
 
+nnoremap <leader>tr :action GotoRelated<CR>
+vnoremap <leader>tr :action GotoRelated<CR>
+
 nnoremap <leader>gh :action Github.Open.In.Browser<CR>
 vnoremap <leader>gh :action Github.Open.In.Browser<CR>
 
@@ -85,10 +88,23 @@ vnoremap <C-p> :action GotoFile<CR>
 nnoremap <C-b> :action RecentFiles<CR>
 vnoremap <C-b> :action RecentFiles<CR>
 
+nnoremap <C-h> :action PrevSplitter<CR>
+vnoremap <C-h> :action PrevSplitter<CR>
+
+nnoremap <C-l> :action NextSplitter<CR>
+vnoremap <C-l> :action NextSplitter<CR>
+
 nnoremap ]<space>    o<Esc>k
 vnoremap ]<space>    <Esc>o<Esc>k
 nnoremap [<space>    O<Esc>
 vnoremap [<space>    <Esc>O<Esc>
+
+" next line when insert mode ; CAUSION: this overwrite default <C-o>
+inoremap <C-o> <ESC>o
+
+" insert mode move to begin/end
+inoremap <C-a> <ESC>I
+inoremap <C-e> <ESC>A
 
 nnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
 vnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
