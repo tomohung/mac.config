@@ -27,8 +27,7 @@ set showmode
 set scrolloff=1
 set hlsearch
 set incsearch
-set relativenumber
-set number
+set number relativenumber
 set ignorecase " case insensitive"
 set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
 set gdefault " the :substitute flag 'g' is by default
@@ -44,8 +43,12 @@ set ideajoin
 nnoremap <leader>gb :action Annotate<CR>
 vnoremap <leader>gb :action Annotate<CR>
 
-nnoremap <leader>cf :action CopyPathWithLineNumber<CR>
-vnoremap <leader>cf :action CopyPathWithLineNumber<CR>
+nnoremap <leader>cf :action CopyContentRootPath<CR>
+vnoremap <leader>cf :action CopyContentRootPath<CR>
+
+nnoremap <leader>cn :action CopyPathWithLineNumber<CR>
+vnoremap <leader>cn :action CopyPathWithLineNumber<CR>
+
 
 nnoremap <leader>e :action SelectInProjectView<CR>
 vnoremap <leader>e :action SelectInProjectView<CR>
@@ -56,6 +59,9 @@ vnoremap <leader>tt :action GotoTest<CR>
 
 nnoremap <leader>tr :action GotoRelated<CR>
 vnoremap <leader>tr :action GotoRelated<CR>
+
+nnoremap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
+vnoremap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
 
 nnoremap <leader>gh :action Github.Open.In.Browser<CR>
 vnoremap <leader>gh :action Github.Open.In.Browser<CR>
@@ -112,3 +118,18 @@ vnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
 
 nnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
 vnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
+
+nnoremap <leader>rm :action ExtractMethod<CR>
+vnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rc :action IntroduceConstant<CR>
+vnoremap <leader>rc :action IntroduceConstant<CR>
+nnoremap <leader>rl :action rspec.LetIntroduce<CR>
+vnoremap <leader>rl :action rspec.LetIntroduce<CR>
+nnoremap <leader>rf :action IntroduceConstant<CR>
+vnoremap <leader>rf :action IntroduceConstant<CR>
+nnoremap <leader>rc :action IntroduceField<CR>
+vnoremap <leader>rc :action IntroduceField<CR>
+nnoremap <leader>rp :action IntroduceParameter<CR>
+vnoremap <leader>rp :action IntroduceParameter<CR>
+nnoremap <leader>rv :action IntroduceParameter<CR>
+vnoremap <leader>rv :action IntroduceParameter<CR>
