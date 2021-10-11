@@ -106,9 +106,6 @@ vnoremap ]<space>    <Esc>o<Esc>k
 nnoremap [<space>    O<Esc>
 vnoremap [<space>    <Esc>O<Esc>
 
-" next line when insert mode ; CAUSION: this overwrite default <C-o>
-inoremap <C-o> <ESC>o
-
 " insert mode move to begin/end
 inoremap <C-a> <ESC>I
 inoremap <C-e> <ESC>A
@@ -119,17 +116,19 @@ vnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
 nnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
 vnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
 
-nnoremap <leader>rm :action ExtractMethod<CR>
-vnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+vnoremap <leader>rv :action IntroduceVariable<CR>
 nnoremap <leader>rc :action IntroduceConstant<CR>
 vnoremap <leader>rc :action IntroduceConstant<CR>
-nnoremap <leader>rl :action rspec.LetIntroduce<CR>
-vnoremap <leader>rl :action rspec.LetIntroduce<CR>
-nnoremap <leader>rf :action IntroduceConstant<CR>
-vnoremap <leader>rf :action IntroduceConstant<CR>
-nnoremap <leader>rc :action IntroduceField<CR>
-vnoremap <leader>rc :action IntroduceField<CR>
+nnoremap <leader>rf :action IntroduceField<CR>
+vnoremap <leader>rf :action IntroduceField<CR>
 nnoremap <leader>rp :action IntroduceParameter<CR>
 vnoremap <leader>rp :action IntroduceParameter<CR>
-nnoremap <leader>rv :action IntroduceParameter<CR>
-vnoremap <leader>rv :action IntroduceParameter<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+vnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rM :action ExtractModule<CR>
+vnoremap <leader>rM :action ExtractModule<CR>
+nnoremap <leader>rC :action ExtractClass<CR>
+vnoremap <leader>rC :action ExtractClass<CR>
+nnoremap <leader>rl :action rspec.LetIntroduce<CR>
+vnoremap <leader>rl :action rspec.LetIntroduce<CR>
