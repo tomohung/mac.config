@@ -1,9 +1,10 @@
 # 'brew tap'
-tap "homebrew/cask"
+# tap "homebrew/cask"
 # 'brew tap' with custom Git URL
-tap "user/tap-repo", "https://user@bitbucket.org/user/homebrew-tap-repo.git"
+# tap "user/tap-repo", "https://user@bitbucket.org/user/homebrew-tap-repo.git"
 # set arguments for all 'brew install --cask' commands
-cask_args appdir: "~/Applications", require_sha: true
+# cask_args appdir: "~/Applications", require_sha: true
+cask_args appdir: "~/Applications"
 
 # 'brew install'
 brew "git"
@@ -36,13 +37,13 @@ cask "dash"
 cask "google-drive"
 cask "kobo"
 cask "microsoft-edge"
-cask "pocket"
 cask "postman"
 cask "shiftit"
 cask "skype"
 cask "slack"
 cask "sublime-text"
-cask "yujitach-menumeters"
+cask "menumeters"
 
 # 'mas install'
 # mas "1Password", id: 443987910
+mas "pocket", id: 568494494
