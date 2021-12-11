@@ -50,6 +50,7 @@ cask "sublime-text"
 cask "menumeters"
 cask "1password"
 cask "docker"
+cask "google-cloud-sdk"
 
 # 'mas install'
 # mas "1Password", id: 1333542190

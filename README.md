@@ -108,3 +108,8 @@ asdf install ruby 2.6.6
 ```
 ln -s ~/mac.config/ideavimrc ~/.ideavimrc
 ```
+
+#### tig
+```
+ln -s ~/mac.config/tigrc ~/.tigrc
+```
