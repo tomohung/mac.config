@@ -1,13 +1,15 @@
 # 'brew tap'
-tap "homebrew/cask"
+# tap "homebrew/cask"
 # 'brew tap' with custom Git URL
-tap "user/tap-repo", "https://user@bitbucket.org/user/homebrew-tap-repo.git"
+# tap "user/tap-repo", "https://user@bitbucket.org/user/homebrew-tap-repo.git"
 # set arguments for all 'brew install --cask' commands
-cask_args appdir: "~/Applications", require_sha: true
+# cask_args appdir: "~/Applications", require_sha: true
+cask_args appdir: "~/Applications"
 
 # 'brew install'
 brew "git"
 brew "tig"
+brew "ctags"
 brew "antigen"
 brew "openssl"
 brew "reattach-to-user-namespace"
@@ -23,6 +25,7 @@ brew "diff-so-fancy"
 brew "neovim"
 brew "tmuxp"
 brew "git-recent"
+brew "fzf"
 
 # 'brew install --cask'
 cask "iterm2"
@@ -30,19 +33,19 @@ cask "kiwi-for-gmail"
 cask "obsidian"
 cask "skitch"
 cask "rubymine"
-cask "1password"
 cask "alfred"
 cask "dash"
 cask "google-drive"
 cask "kobo"
 cask "microsoft-edge"
-cask "pocket"
 cask "postman"
 cask "shiftit"
 cask "skype"
 cask "slack"
 cask "sublime-text"
-cask "yujitach-menumeters"
+cask "menumeters"
+cask "1password"
 
 # 'mas install'
-# mas "1Password", id: 443987910
+# mas "1Password", id: 1333542190
+mas "pocket", id: 568494494

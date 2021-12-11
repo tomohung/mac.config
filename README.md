@@ -32,12 +32,20 @@ make sure iTerm is using zsh, then close iTerm and open again will automatical u
 ## vim config is built from scratch!
 vim plugin manager switch to vim-plug, it's much simpler.
 
+Install
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+Copy config
 ```
 ln -s ~/mac.config/vimrc ~/.vimrc
 ```
 
 or neovim
 ```
+mkdir ~/.config/nvim
 ln -s ~/mac.config/vimrc ~/.config/nvim/init.vim
 ```
 
