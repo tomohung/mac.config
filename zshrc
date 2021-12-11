@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
+source $(brew --prefix)/opt/antigen/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library
 antigen use oh-my-zsh
@@ -35,13 +35,14 @@ export PATH="$HOME/.bin:$PATH"
 export LC_ALL=en_US.UTF-8
 
 # recommended by brew doctor
-# export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+# asdf
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# . $HOME/.asdf/completions/asdf.bash
 
 # put local secret here
-source ~/.local.zshrc
+# source ~/.local.zshrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
