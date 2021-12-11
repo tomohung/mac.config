@@ -1,9 +1,19 @@
 # Setup 2022 Maccbook M1 Pro
 
 ## Initial
+
+1. extract `.ssh` to `~`
+
+2. clone mac.config (This repo)
+```
+git clone git@github.com:tomohung/mac.config.git
+```
 ### install homebrew
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+```
 brew bundle
 ```
 
