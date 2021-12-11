@@ -20,12 +20,17 @@ brew "watchman"
 brew "zsh"
 brew "hub"
 brew "imagemagick"
-brew "asdf"
 brew "diff-so-fancy"
 brew "neovim"
 brew "tmuxp"
 brew "git-recent"
 brew "fzf"
+
+# asdf
+brew "asdf"
+brew "openssl"
+brew "readline"
+brew "ruby-build"
 
 # 'brew install --cask'
 cask "iterm2"
@@ -45,6 +50,7 @@ cask "slack"
 cask "sublime-text"
 cask "menumeters"
 cask "1password"
+cask "docker"
 
 # 'mas install'
 # mas "1Password", id: 1333542190
