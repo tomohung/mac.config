@@ -4,3 +4,4 @@ autoload
 .netrwhist
 *.swp
 tags
+Brewfile.lock.json

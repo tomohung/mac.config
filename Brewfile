@@ -9,6 +9,7 @@ cask_args appdir: "~/Applications"
 # 'brew install'
 brew "git"
 brew "tig"
+brew "ctags"
 brew "antigen"
 brew "openssl"
 brew "reattach-to-user-namespace"
@@ -24,6 +25,7 @@ brew "diff-so-fancy"
 brew "neovim"
 brew "tmuxp"
 brew "git-recent"
+brew "fzf"
 
 # 'brew install --cask'
 cask "iterm2"
@@ -31,7 +33,6 @@ cask "kiwi-for-gmail"
 cask "obsidian"
 cask "skitch"
 cask "rubymine"
-cask "1password"
 cask "alfred"
 cask "dash"
 cask "google-drive"
@@ -43,7 +44,8 @@ cask "skype"
 cask "slack"
 cask "sublime-text"
 cask "menumeters"
+cask "1password"
 
 # 'mas install'
-# mas "1Password", id: 443987910
+# mas "1Password", id: 1333542190
 mas "pocket", id: 568494494
