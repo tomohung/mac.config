@@ -35,13 +35,14 @@ export PATH="$HOME/.bin:$PATH"
 export LC_ALL=en_US.UTF-8
 
 # recommended by brew doctor
-# export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+# asdf
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# . $HOME/.asdf/completions/asdf.bash
 
 # put local secret here
-source ~/.local.zshrc
+# source ~/.local.zshrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -27,7 +27,6 @@ brew "git-recent"
 brew "fzf"
 
 # asdf
-brew "asdf"
 brew "openssl"
 brew "readline"
 brew "ruby-build"

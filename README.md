@@ -92,6 +92,17 @@ Enable key bindings
 ```
 $(brew --prefix)/opt/fzf/install
 ```
+#### asdf
+
+```
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+```
+
+run
+```
+asdf plugin add ruby
+asdf install ruby 2.6.6
+```
 
 #### RubyMine
 ```
