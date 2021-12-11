@@ -1,48 +1,55 @@
-# Setup my new mac for 2018
+# Setup 2022 Maccbook M1 Pro
 
 ## Initial
-### Run script from Thoughtbot
-https://github.com/thoughtbot/laptop
-1. curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
-### custom installation
-2. ln -s ~/mac.config/laptop.local ~/.laptop.local
-### Update Mac
-3. sh mac 2>&1 | tee ~/laptop.log
+### install homebrew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew bundle
+```
 
 ## config for diff-so-fancy
 https://github.com/so-fancy/diff-so-fancy
+```
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+```
 
 ## Antigen for ZSH
-1. $ ln -s ~/mac.config/zshrc ~/.zshrc
+```
+ln -s ~/mac.config/zshrc ~/.zshrc
+```
 make sure iTerm is using zsh, then close iTerm and open again will automatical update
 
 ## vim config is built from scratch!
 vim plugin manager switch to vim-plug, it's much simpler.
 
-1. $ ln -s ~/mac.config/vimrc ~/.vimrc
+```
+ln -s ~/mac.config/vimrc ~/.vimrc
+```
 
 or neovim
-   $ ln -s ~/mac.config/vimrc ~/.config/nvim/init.vim
+```
+ln -s ~/mac.config/vimrc ~/.config/nvim/init.vim
+```
 
 2. open vim
 3. `:PlugInstall` # not necessary for first time
 
 ## Tmux
 #### Tmux Plugin Manager
-0. ln -s ~/mac.config/tmux.conf ~/.tmux.conf
-1. open tmux
-2. `prefix + I` -> install plugin
+Install
+```
+if [ ! -d ~/.tmux/plugins ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+```
+Run
+```
+ln -s ~/mac.config/tmux.conf ~/.tmux.conf
+```
+open tmux > `prefix + I` -> install plugin
 
 #### Auto start tmux in iTerm2
-Navigate to "Preferences > Profiles > PROFILE > Command > Send text at start" and set it to:
-```
-tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}
-```
-
-or use Tmuxp template
-
-install `pip install tmuxp`
+use Tmuxp template
 
 ```
 ln -s ~/mac.config/tmuxp ~/.config/tmuxp
@@ -71,10 +78,4 @@ $(brew --prefix)/opt/fzf/install
 #### RubyMine
 ```
 ln -s ~/mac.config/ideavimrc ~/.ideavimrc
-```
-
-##### Install intellimacs
-
-```
-git clone https://github.com/MarcoIeni/intellimacs ~/.intellimacs
 ```
