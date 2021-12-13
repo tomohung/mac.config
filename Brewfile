@@ -1,5 +1,5 @@
 # 'brew tap'
-# tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 # 'brew tap' with custom Git URL
 # tap "user/tap-repo", "https://user@bitbucket.org/user/homebrew-tap-repo.git"
 # set arguments for all 'brew install --cask' commands
@@ -51,6 +51,8 @@ cask "menumeters"
 cask "1password"
 cask "docker"
 cask "google-cloud-sdk"
+cask "openvanilla"
+cask "font-meslo-lg-nerd-font"
 
 # 'mas install'
 # mas "1Password", id: 1333542190
