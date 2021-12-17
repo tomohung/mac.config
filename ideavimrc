@@ -28,7 +28,7 @@ set showmode
 set scrolloff=1
 set hlsearch
 set incsearch
-set number relativenumber
+" set number relativenumber
 set ignorecase " case insensitive"
 set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
 set gdefault " the :substitute flag 'g' is by default

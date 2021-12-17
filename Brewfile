@@ -7,6 +7,7 @@ tap "homebrew/cask-fonts"
 cask_args appdir: "~/Applications"
 
 # 'brew install'
+brew "cmake"
 brew "git"
 brew "tig"
 brew "ctags"
