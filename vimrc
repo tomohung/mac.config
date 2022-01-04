@@ -45,7 +45,7 @@ Plug 'junegunn/fzf.vim'
 " Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
 Plug 'janko-m/vim-test' " Run tests <leader>tn <leader>tf <leader>ts <leader>tl
 Plug 'tpope/vim-bundler' " gem install gem-catgs; gem ctags; will generate all tags from gemfile
-" Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'jlanzarotta/bufexplorer' " BufExplorer <leader>be
 " Plug 'vim-syntastic/syntastic' " syntax checking hacks
 Plug 'w0rp/ale' " Asynchronous linting/fixing for Vim and language server protocol integration
@@ -191,7 +191,8 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <silent> <leader>bo :BufOnly<CR>
 
 " Ctags
-nmap <Leader>tag :Ctags<CR>
+let g:gutentags_ctags_executable_ruby = 'ripper-tags'
+nmap <Leader>tag :GutentagsUpdate!<CR>
 
 """ Plugin Config
 " For netrw
