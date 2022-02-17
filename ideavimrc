@@ -73,6 +73,9 @@ vnoremap <leader>tl :action Rerun<CR>
 nnoremap <leader>tn :action RunClass<CR>
 vnoremap <leader>tn :action RunClass<CR>
 
+nnoremap <leader>tf gg :action RunClass<CR>
+vnoremap <leader>tf gg :action RunClass<CR>
+
 nnoremap <leader>dd :action DebugClass<CR>
 vnoremap <leader>dd :action DebugClass<CR>
 
