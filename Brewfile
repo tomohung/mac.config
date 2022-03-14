@@ -53,6 +53,7 @@ cask "docker"
 cask "google-cloud-sdk"
 cask "openvanilla"
 cask "font-meslo-lg-nerd-font"
+cask "keycastr"
 
 # 'mas install'
 # mas "1Password", id: 1333542190
