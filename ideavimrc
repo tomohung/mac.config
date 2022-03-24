@@ -1,18 +1,6 @@
 """ Map leader to space ---------------------
 let mapleader=" "
 
-" Comma for major mode
-" nmap , <leader>m
-" vmap , <leader>m
-
-" Select Intellimacs modules"
-" source ~/.intellimacs/spacemacs.vim
-
-" (Optional) Enable other Intellimacs modules
-" source ~/.intellimacs/extra.vim
-" source ~/.intellimacs/major.vim
-" source ~/.intellimacs/hybrid.vim
-
 """ Plugins  --------------------------------
 set surround
 set commentary
@@ -40,7 +28,7 @@ set ideajoin
 " set idearefactormode=keep
 
 """ Mappings --------------------------------
-" https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+" https://github.com/tomohung/mac.config/blob/master/ideavim_actionlist
 nnoremap <leader>gb :action Annotate<CR>
 vnoremap <leader>gb :action Annotate<CR>
 
@@ -109,6 +97,7 @@ nnoremap ]<space>    o<Esc>k
 vnoremap ]<space>    <Esc>o<Esc>k
 nnoremap [<space>    O<Esc>
 vnoremap [<space>    <Esc>O<Esc>
+:nnoremap <silent> gr "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR><c-l>:nohlsearch<CR>
 
 " insert mode move to begin/end
 inoremap <C-a> <ESC>I
@@ -119,20 +108,26 @@ vnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
 
 nnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
 vnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+vnoremap <leader>rn :action RenameElement<CR>
 
-nnoremap <leader>rv :action IntroduceVariable<CR>
-vnoremap <leader>rv :action IntroduceVariable<CR>
-nnoremap <leader>rc :action IntroduceConstant<CR>
-vnoremap <leader>rc :action IntroduceConstant<CR>
-nnoremap <leader>rf :action IntroduceField<CR>
-vnoremap <leader>rf :action IntroduceField<CR>
-nnoremap <leader>rp :action IntroduceParameter<CR>
-vnoremap <leader>rp :action IntroduceParameter<CR>
-nnoremap <leader>rm :action ExtractMethod<CR>
-vnoremap <leader>rm :action ExtractMethod<CR>
-nnoremap <leader>rM :action ExtractModule<CR>
-vnoremap <leader>rM :action ExtractModule<CR>
-nnoremap <leader>rC :action ExtractClass<CR>
-vnoremap <leader>rC :action ExtractClass<CR>
-nnoremap <leader>rl :action rspec.LetIntroduce<CR>
-vnoremap <leader>rl :action rspec.LetIntroduce<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR><ESC>
+vnoremap <leader>rv :action IntroduceVariable<CR><ESC>
+nnoremap <leader>rc :action IntroduceConstant<CR><ESC>
+vnoremap <leader>rc :action IntroduceConstant<CR><ESC>
+nnoremap <leader>rf :action IntroduceField<CR><ESC>
+vnoremap <leader>rf :action IntroduceField<CR><ESC>
+nnoremap <leader>rp :action IntroduceParameter<CR><ESC>
+vnoremap <leader>rp :action IntroduceParameter<CR><ESC>
+nnoremap <leader>rm :action ExtractMethod<CR><ESC>
+vnoremap <leader>rm :action ExtractMethod<CR><ESC>
+nnoremap <leader>rM :action ExtractModule<CR><ESC>
+vnoremap <leader>rM :action ExtractModule<CR><ESC>
+nnoremap <leader>rC :action ExtractClass<CR><ESC>
+vnoremap <leader>rC :action ExtractClass<CR><ESC>
+nnoremap <leader>rl :action rspec.LetIntroduce<CR><ESC>
+vnoremap <leader>rl :action rspec.LetIntroduce<CR><ESC>
+nnoremap <leader>fm :action Move<CR>
+vnoremap <leader>fm :action Move<CR>
+nnoremap <leader>fc :action CopyElement<CR>
+vnoremap <leader>fc :action CopyElement<CR>
