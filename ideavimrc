@@ -7,6 +7,8 @@ set commentary
 set NERDTree
 set easymotion
 set matchit
+set exchange
+set vim-indent-object
 " set multiple-cursors
 
 """ Plugin settings -------------------------
@@ -14,9 +16,9 @@ set matchit
 """ Common settings -------------------------
 set showmode
 set scrolloff=1
-set hlsearch
+" set hlsearch " nohighlight takes more time!
 set incsearch
-set number "relativenumber
+set relativenumber " number
 set ignorecase " case insensitive"
 set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
 set gdefault " the :substitute flag 'g' is by default
@@ -29,105 +31,115 @@ set ideajoin
 
 """ Mappings --------------------------------
 " https://github.com/tomohung/mac.config/blob/master/ideavim_actionlist
-nnoremap <leader>gb :action Annotate<CR>
-vnoremap <leader>gb :action Annotate<CR>
+nmap <leader>gb :action Annotate<CR>
+vmap <leader>gb :action Annotate<CR>
 
-nnoremap <leader>cf :action CopyContentRootPath<CR>
-vnoremap <leader>cf :action CopyContentRootPath<CR>
+nmap <leader>cf :action CopyContentRootPath<CR>
+nmap <leader>cn :action CopyPathWithLineNumber<CR>
 
-nnoremap <leader>cn :action CopyPathWithLineNumber<CR>
-vnoremap <leader>cn :action CopyPathWithLineNumber<CR>
+nmap <leader>e :action SelectInProjectView<CR>
+nmap <leader>tt :action GotoTest<CR>
+nmap <leader>tr :action GotoRelated<CR>
+nmap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
 
+nmap <leader>gh :action Github.Open.In.Browser<CR>
+vmap <leader>gh :action Github.Open.In.Browser<CR>
 
-nnoremap <leader>e :action SelectInProjectView<CR>
-vnoremap <leader>e :action SelectInProjectView<CR>
+nmap <C-r>:w<CR> :action Rerun<CR>
+imap <C-r> <ESC>:w<CR> :action Rerun<CR>
 
+nmap <leader>tn :action RunClass<CR>
+nmap <leader>tf gg :action RunClass<CR>
+nmap <leader>dd :action DebugClass<CR>
 
-nnoremap <leader>tt :action GotoTest<CR>
-vnoremap <leader>tt :action GotoTest<CR>
+nmap <leader>dm :action ToggleLineBreakpoint<CR>
+vmap <leader>dm :action ToggleLineBreakpoint<CR>
 
-nnoremap <leader>tr :action GotoRelated<CR>
-vnoremap <leader>tr :action GotoRelated<CR>
+nmap <leader>no :<C-u>nohlsearch<CR>
 
-nnoremap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
-vnoremap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
+nmap <leader>= :action ReformatCode<CR>
+vmap <leader>= :action ReformatCode<CR>
 
-nnoremap <leader>gh :action Github.Open.In.Browser<CR>
-vnoremap <leader>gh :action Github.Open.In.Browser<CR>
+nmap <leader>/  yiw :action FindInPath<CR>
+vmap <leader>/  :action FindInPath<CR>
 
-nnoremap <leader>tl :action Rerun<CR>
-vnoremap <leader>tl :action Rerun<CR>
+nmap <leader><Tab> <C-S-6>
+vmap <leader><Tab> <Esc><C-S-6>
 
-nnoremap <leader>tn :action RunClass<CR>
-vnoremap <leader>tn :action RunClass<CR>
+map <C-A-K> :action MoveLineUp<CR>:action VimAutoIndentLines<CR>
+imap <C-A-K> <Esc>:action MoveLineUp<CR>:action VimAutoIndentLines<CR>
+map <C-A-J> :action MoveLineDown<CR>:action VimAutoIndentLines<CR>
+imap <C-A-J> <Esc>:action MoveLineDown<CR>:action VimAutoIndentLines<CR>
 
-nnoremap <leader>tf gg :action RunClass<CR>
-vnoremap <leader>tf gg :action RunClass<CR>
+nmap <C-p> :action GotoFile<CR>
+nmap <leader>fr :action RecentFiles<CR>
+nmap <leader>fl :action RecentLocations<CR>
+nmap <leader>fs :action FileStructurePopup<CR>
 
-nnoremap <leader>dd :action DebugClass<CR>
-vnoremap <leader>dd :action DebugClass<CR>
+nmap <C-h> :action PrevSplitter<CR>
+vmap <C-h> :action PrevSplitter<CR>
 
-nnoremap <leader>dm :action ToggleLineBreakpoint<CR>
-vnoremap <leader>dm :action ToggleLineBreakpoint<CR>
+nmap <C-l> :action NextSplitter<CR>
+vmap <C-l> :action NextSplitter<CR>
 
-nnoremap <leader>no :<C-u>nohlsearch<CR>
-
-nnoremap <leader>= :action ReformatCode<CR>
-vnoremap <leader>= :action ReformatCode<CR>
-
-nnoremap <leader>/  yiw :action FindInPath<CR>
-vnoremap <leader>/  :action FindInPath<CR>
-
-nnoremap <leader><Tab> <C-S-6>
-vnoremap <leader><Tab> <Esc><C-S-6>
-
-nnoremap <C-p> :action GotoFile<CR>
-vnoremap <C-p> :action GotoFile<CR>
-
-nnoremap <C-b> :action RecentFiles<CR>
-vnoremap <C-b> :action RecentFiles<CR>
-
-nnoremap <C-h> :action PrevSplitter<CR>
-vnoremap <C-h> :action PrevSplitter<CR>
-
-nnoremap <C-l> :action NextSplitter<CR>
-vnoremap <C-l> :action NextSplitter<CR>
-
-nnoremap ]<space>    o<Esc>k
-vnoremap ]<space>    <Esc>o<Esc>k
-nnoremap [<space>    O<Esc>
-vnoremap [<space>    <Esc>O<Esc>
-:nnoremap <silent> gr "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR><c-l>:nohlsearch<CR>
+nmap ]<space>    o<Esc>k
+vmap ]<space>    <Esc>o<Esc>k
+nmap [<space>    O<Esc>
+vmap [<space>    <Esc>O<Esc>
+:nmap <silent> gr "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR><c-l>:nohlsearch<CR>
 
 " insert mode move to begin/end
-inoremap <C-a> <ESC>I
-inoremap <C-e> <ESC>A
+imap <C-a> <ESC>I
+imap <C-e> <ESC>A
+vmap <C-a> ^
+vmap <C-e> $
 
-nnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
-vnoremap <leader>'    :action ActivateTerminalToolWindow<CR>
+nmap <leader>'    :action ActivateTerminalToolWindow<CR>
+vmap <leader>'    :action ActivateTerminalToolWindow<CR>
 
-nnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
-vnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
-nnoremap <leader>rn :action RenameElement<CR>
-vnoremap <leader>rn :action RenameElement<CR>
+nmap <leader>R :action Refactorings.QuickListPopupAction<CR>
+vmap <leader>R :action Refactorings.QuickListPopupAction<CR>
+nmap <leader>rn :action RenameElement<CR>
+vmap <leader>rn :action RenameElement<CR>
 
-nnoremap <leader>rv :action IntroduceVariable<CR><ESC>
-vnoremap <leader>rv :action IntroduceVariable<CR><ESC>
-nnoremap <leader>rc :action IntroduceConstant<CR><ESC>
-vnoremap <leader>rc :action IntroduceConstant<CR><ESC>
-nnoremap <leader>rf :action IntroduceField<CR><ESC>
-vnoremap <leader>rf :action IntroduceField<CR><ESC>
-nnoremap <leader>rp :action IntroduceParameter<CR><ESC>
-vnoremap <leader>rp :action IntroduceParameter<CR><ESC>
-nnoremap <leader>rm :action ExtractMethod<CR><ESC>
-vnoremap <leader>rm :action ExtractMethod<CR><ESC>
-nnoremap <leader>rM :action ExtractModule<CR><ESC>
-vnoremap <leader>rM :action ExtractModule<CR><ESC>
-nnoremap <leader>rC :action ExtractClass<CR><ESC>
-vnoremap <leader>rC :action ExtractClass<CR><ESC>
-nnoremap <leader>rl :action rspec.LetIntroduce<CR><ESC>
-vnoremap <leader>rl :action rspec.LetIntroduce<CR><ESC>
-nnoremap <leader>fm :action Move<CR>
-vnoremap <leader>fm :action Move<CR>
-nnoremap <leader>fc :action CopyElement<CR>
-vnoremap <leader>fc :action CopyElement<CR>
+nmap <leader>rv :action IntroduceVariable<CR><ESC>
+vmap <leader>rv :action IntroduceVariable<CR><ESC>
+nmap <leader>rc :action IntroduceConstant<CR><ESC>
+vmap <leader>rc :action IntroduceConstant<CR><ESC>
+nmap <leader>rf :action IntroduceField<CR><ESC>
+vmap <leader>rf :action IntroduceField<CR><ESC>
+nmap <leader>rp :action IntroduceParameter<CR><ESC>
+vmap <leader>rp :action IntroduceParameter<CR><ESC>
+nmap <leader>rm :action ExtractMethod<CR><ESC>
+vmap <leader>rm :action ExtractMethod<CR><ESC>
+nmap <leader>rM :action ExtractModule<CR><ESC>
+vmap <leader>rM :action ExtractModule<CR><ESC>
+nmap <leader>rC :action ExtractClass<CR><ESC>
+vmap <leader>rC :action ExtractClass<CR><ESC>
+nmap <leader>rl :action rspec.LetIntroduce<CR><ESC>
+vmap <leader>rl :action rspec.LetIntroduce<CR><ESC>
+nmap <leader>fm :action Move<CR>
+vmap <leader>fm :action Move<CR>
+nmap <leader>fc :action CopyElement<CR>
+vmap <leader>fc :action CopyElement<CR>
+
+
+imap <A-.> self.
+nmap <A-.> iself.
+nmap <A-L> :set rnu!<CR>
+nmap <C-\> :action AceTargetAction<CR>
+
+nmap <A-p> "0p
+imap <A-p> <ESC>"0p
+nmap <BS> a<BS
+
+:nmap z, vi)
+:nmap z. vi}
+:nmap z) vi)
+:nmap z} vi}
+:nmap z] vi]
+:nmap z> vi[t
+:nmap c> cit
+:nmap z" vi"
+:nmap z' vi'
+:nmap zxx ci]
