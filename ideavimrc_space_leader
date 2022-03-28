@@ -7,8 +7,8 @@ set commentary
 set NERDTree
 set easymotion
 set matchit
-set exchange
-set textobj-indent
+set vim-exchange
+set vim-indent-object
 " set multiple-cursors
 
 """ Plugin settings -------------------------
@@ -29,6 +29,11 @@ set ideajoin
 " set ideastatusicon=gray
 " set idearefactormode=keep
 
+:set rnu
+:set surround
+:set easymotion
+nmap z; $a;<Esc>
+imap z; <Esc>$a;
 
 nmap ,p "0p
 nmap ,P "0P
@@ -43,6 +48,7 @@ imap z,P <Esc>"0Pa
 :nmap z" vi"
 :nmap z' vi'
 :nmap zxx ci]
+":vmap <Esc> <Esc><Esc><Esc>
 :imap jj <Esc>
 :nmap <BS> a<BS>
 :nmap zh ^
@@ -51,16 +57,19 @@ imap z,P <Esc>"0Pa
 :nmap zl $
 :nmap ll $
 :imap zl <End>
+":nmap zt zt2k2j
 :nmap hc ^C
 :nmap zb ciw
 :vmap zb <Esc>ciw
 :imap zd <Esc>dd
+"nmap j gj
+"nmap k gk
 nmap qq ZQ
 nmap zq :wq<CR>
 :nmap <BS> a<BS>
 
-imap <F1> <ESC>V%ygPO<ESC>j " only works at the later pair, e.g. }]end
-nmap <F1> V%ygPO<ESC>j
+imap <F1> <Esc>mby?def test<CR>`bp?def test_<CR>f_la<Esc>
+nmap <F1> mby?def test<CR>`bp?def test_<CR>f_la<Esc>
 imap <A-F1> <CR><Esc>y?it <CR>kPNf'lzz
 nmap <A-F1> y?it <CR>kPNf'lzz
 
@@ -73,8 +82,8 @@ nmap zf :action GotoDeclaration<CR>
 imap zf <Esc>:action GotoDeclaration<CR>
 nmap zgc zz:action CheckinProject<CR>
 
-nmap zra zz:action RearrangeCode<CR>zz:action ReformatCode<CR>zz:action Rerun<CR><ESC>
-imap zra <Esc>zz:action RearrangeCode<CR>zz:action ReformatCode<CR>zz:action Rerun<CR><ESC>
+nmap zra zz:action RearrangeCode<CR>zz:action ReformatCode<CR>zz:action Rerun<CR>
+imap zra <Esc>zz:action RearrangeCode<CR>zz:action ReformatCode<CR>zz:action Rerun<CR>
 
 map zrr :action RenameElement<CR>
 
@@ -99,21 +108,18 @@ map zrt :action SearchEverywhere<CR>
 imap zrt <Esc>:action SearchEverywhere<CR>
 map zro :action Move<CR>
 imap zro <Esc>:action Move<CR>
-map <C-y> :action EditorDuplicateLines<CR><ESC>
-imap <C-y> <Esc>:action EditorDuplicateLines<CR>
+map <C-D> :action EditorDuplicateLines<CR>
+imap <C-D> <Esc>:action EditorDuplicateLines<CR>
 map <C-A-K> :action MoveLineUp<CR>:action VimAutoIndentLines<CR>
 imap <C-A-K> <Esc>:action MoveLineUp<CR>:action VimAutoIndentLines<CR>
 map <C-A-J> :action MoveLineDown<CR>:action VimAutoIndentLines<CR>
 imap <C-A-J> <Esc>:action MoveLineDown<CR>:action VimAutoIndentLines<CR>
 map <A-D> :action EditorDeleteLine<CR>
 imap <A-D> <Esc>:action EditorDeleteLine<CR>
-map <A-K> :action MethodUp<CR>
-imap <A-K> :action MethodUp<CR>
-map <A-J> :action MethodDown<CR>
-imap <A-J> :action MethodDown<CR>
 :nmap ,m :action FileStructurePopup<CR>
-:nmap zcc ci"
-:nmap zaa ca"
+:nmap zcc ci'
+:nmap zaa ca'
+nmap <A-u> :redo<CR>
 
 nmap ,g :action Generate<CR>
 nmap ,c :action NewElementSamePlace<CR>
@@ -130,8 +136,8 @@ imap <A-.> self.
 nmap <A-.> iself.
 nmap <A-L> :set rnu!<CR>
 nmap zsi ^df:j$ps else <Esc>Jde
-
 """ Mappings --------------------------------
+" https://github.com/tomohung/mac.config/blob/master/ideavim_actionlist
 nmap <leader>gb :action Annotate<CR>
 vmap <leader>gb :action Annotate<CR>
 
@@ -146,8 +152,12 @@ nmap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
 nmap <leader>gh :action Github.Open.In.Browser<CR>
 vmap <leader>gh :action Github.Open.In.Browser<CR>
 
+nmap <C-r>:w<CR> :action Rerun<CR>
+imap <C-r> <ESC>:w<CR> :action Rerun<CR>
+
 nmap <leader>tn :action RunClass<CR>
-nmap <leader>tf mbgg :action RunClass<CR><ESC>'b
+nmap <leader>tf gg :action RunClass<CR>
+nmap <leader>dd :action DebugClass<CR>
 
 nmap <leader>dm :action ToggleLineBreakpoint<CR>
 vmap <leader>dm :action ToggleLineBreakpoint<CR>
@@ -162,6 +172,11 @@ vmap <leader>/  :action FindInPath<CR>
 
 nmap <leader><Tab> <C-S-6>
 vmap <leader><Tab> <Esc><C-S-6>
+
+map <C-A-K> :action MoveLineUp<CR>:action VimAutoIndentLines<CR>
+imap <C-A-K> <Esc>:action MoveLineUp<CR>:action VimAutoIndentLines<CR>
+map <C-A-J> :action MoveLineDown<CR>:action VimAutoIndentLines<CR>
+imap <C-A-J> <Esc>:action MoveLineDown<CR>:action VimAutoIndentLines<CR>
 
 nmap <C-p> :action GotoFile<CR>
 nmap <leader>fr :action RecentFiles<CR>
@@ -185,6 +200,9 @@ imap <C-a> <ESC>I
 imap <C-e> <ESC>A
 vmap <C-a> ^
 vmap <C-e> $
+
+nmap <leader>'    :action ActivateTerminalToolWindow<CR>
+vmap <leader>'    :action ActivateTerminalToolWindow<CR>
 
 nmap <leader>R :action Refactorings.QuickListPopupAction<CR>
 vmap <leader>R :action Refactorings.QuickListPopupAction<CR>
@@ -211,3 +229,24 @@ nmap <leader>fm :action Move<CR>
 vmap <leader>fm :action Move<CR>
 nmap <leader>fc :action CopyElement<CR>
 vmap <leader>fc :action CopyElement<CR>
+
+
+imap <A-.> self.
+nmap <A-.> iself.
+nmap <A-L> :set rnu!<CR>
+nmap <C-\> :action AceTargetAction<CR>
+
+nmap <A-p> "0p
+imap <A-p> <ESC>"0p
+nmap <BS> a<BS
+
+:nmap z, vi)
+:nmap z. vi}
+:nmap z) vi)
+:nmap z} vi}
+:nmap z] vi]
+:nmap z> vi[t
+:nmap c> cit
+:nmap z" vi"
+:nmap z' vi'
+:nmap zxx ci]
