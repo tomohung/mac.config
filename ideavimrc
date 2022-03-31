@@ -42,6 +42,8 @@ imap z,P <Esc>"0Pa
 :nmap c> cit
 :nmap z" vi"
 :nmap z' vi'
+:nmap zcc ci"
+:nmap zaa ca"
 :nmap zxx ci]
 :imap jj <Esc>
 :nmap <BS> a<BS>
@@ -58,6 +60,7 @@ imap z,P <Esc>"0Pa
 nmap qq ZQ
 nmap zq :wq<CR>
 :nmap <BS> a<BS>
+nmap zwc viw :action StringManipulation.ToScreamingSnakeCase<CR><ESC>b
 
 imap <F1> <ESC>V%ygPO<ESC>j " only works at the later pair, e.g. }]end
 nmap <F1> V%ygPO<ESC>j
@@ -69,16 +72,14 @@ imap zk <Esc>:action Back<CR>
 nmap zj :action Forward<CR>
 imap zj <Esc>:action Forward<CR>
 nmap zn :action GotoNextError<CR>
-nmap zf :action GotoDeclaration<CR>
-imap zf <Esc>:action GotoDeclaration<CR>
 nmap zgc zz:action CheckinProject<CR>
 
 nmap zra zz:action RearrangeCode<CR>zz:action ReformatCode<CR>zz:action Rerun<CR><ESC>
 imap zra <Esc>zz:action RearrangeCode<CR>zz:action ReformatCode<CR>zz:action Rerun<CR><ESC>
 nmap zrn :action RunClass<CR>
 imap zrn <ESC>:action RunClass<CR>
-nmap zzr mbgg :action RunClass<CR><ESC>'b
-imap zzr <ESC>mbgg :action RunClass<CR><ESC>'b
+nmap zf mbgg :action RunClass<CR><ESC>'b
+imap zf <ESC>mbgg :action RunClass<CR><ESC>'b
 
 map zrr :action RenameElement<CR>
 
@@ -123,8 +124,6 @@ imap <C-J> <ESC>j^
 nmap <C-K> k^
 imap <C-K> <ESC>k^
 :nmap ,m :action FileStructurePopup<CR>
-:nmap zcc ci"
-:nmap zaa ca"
 
 nmap ,g :action Generate<CR>
 nmap ,c :action NewElementSamePlace<CR>
