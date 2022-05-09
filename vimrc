@@ -77,11 +77,11 @@ filetype plugin indent on " load filetype-specific indnet files and plugin
 set shiftwidth=2
 set tabstop=2 " number of visual spaces per TAB
 set expandtab " tabs are spaces
-set number ""relativenumber " show line numbers
+set number relativenumber " show line numbers
 set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching [{()}]
-set hlsearch
+"set hlsearch
 set incsearch
 set ignorecase " case insensitive"
 set smartcase " case insensitive, only sensitive when first char is capital, and only used when igorenocase is on
@@ -150,12 +150,41 @@ if has("mac") || has("gui_macvim") || has("gui_mac")
   nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 endif
 
+imap <F1> <ESC>V%ygPO<ESC>j " only works at the later pair, e.g. }]end
+nmap <F1> V%ygPO<ESC>j
+
 " vim-test mappings
 map <Leader>tn :TestNearest<CR>
+imap <ESC>zrn :TestNearest<CR>
+nmap zrn :TestNearest<CR>
+
 map <Leader>tf :TestFile<CR>
+imap <ESC>zf :TestFile<CR>
+nmap zf :TestFile<CR>
+
 map <Leader>ts :TestSuite<CR>
 map <Leader>tl :TestLast<CR>
+imap <ESC>zra :TestLast<CR>
+nmap zra :TestLast<CR>
 map <Leader>tv :TestVisit<CR>
+
+nmap zh ^
+nmap zl $
+vmap zh ^
+vmap zl $
+nmap zif ddIels<ESC>==
+imap zif <ESC>ddIels<ESC>==
+
+nmap <C-J> j^
+imap <C-J> <ESC>j^
+nmap <C-K> k^
+imap <C-K> <ESC>k^
+imap <C-o> <ESC>O
+
+nmap <C-y> yygP<CR>
+vmap <C-y> ygP<CR>
+imap <C-y> <Esc>yygP<CR>
+nmap <A-L> :set rnu!<CR>
 
 " fugitive git bindings
 nnoremap <Leader>ga :Git add %:p<CR><CR>
