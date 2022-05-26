@@ -60,8 +60,8 @@ imap z,P <Esc>"0Pa
 nmap zwc viw :action StringManipulation.ToScreamingSnakeCase<CR><ESC>b
 imap zwc <ESC>viw :action StringManipulation.ToScreamingSnakeCase<CR><ESC>b
 
-imap <F1> <ESC>V%ygPO<ESC>j " only works at the later pair, e.g. }]end
-nmap <F1> V%ygPO<ESC>j
+imap <F1> <ESC>Vzl%ygPO<ESC>j " only works at the later pair, e.g. }]end
+nmap <F1> Vzl%ygPO<ESC>j
 imap <A-F1> <CR><Esc>y?it <CR>kPNf'lzz
 nmap <A-F1> y?it <CR>kPNf'lzz
 
