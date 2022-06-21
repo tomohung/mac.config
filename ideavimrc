@@ -29,7 +29,6 @@ set ideajoin
 " set ideastatusicon=gray
 " set idearefactormode=keep
 
-
 nmap ,p "0p
 nmap ,P "0P
 imap z,p <Esc>"0pa
@@ -190,7 +189,6 @@ nmap ]<space>    o<Esc>k
 vmap ]<space>    <Esc>o<Esc>k
 nmap [<space>    O<Esc>
 vmap [<space>    <Esc>O<Esc>
-:nmap <silent> gr "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR><c-l>:nohlsearch<CR>
 
 " insert mode move to begin/end
 imap <C-a> <ESC>I
@@ -202,24 +200,3 @@ nmap <leader>R :action Refactorings.QuickListPopupAction<CR>
 vmap <leader>R :action Refactorings.QuickListPopupAction<CR>
 nmap <leader>rn :action RenameElement<CR>
 vmap <leader>rn :action RenameElement<CR>
-
-nmap <leader>rv :action IntroduceVariable<CR><ESC>
-vmap <leader>rv :action IntroduceVariable<CR><ESC>
-nmap <leader>rc :action IntroduceConstant<CR><ESC>
-vmap <leader>rc :action IntroduceConstant<CR><ESC>
-nmap <leader>rf :action IntroduceField<CR><ESC>
-vmap <leader>rf :action IntroduceField<CR><ESC>
-nmap <leader>rp :action IntroduceParameter<CR><ESC>
-vmap <leader>rp :action IntroduceParameter<CR><ESC>
-nmap <leader>rm :action ExtractMethod<CR><ESC>
-vmap <leader>rm :action ExtractMethod<CR><ESC>
-nmap <leader>rM :action ExtractModule<CR><ESC>
-vmap <leader>rM :action ExtractModule<CR><ESC>
-nmap <leader>rC :action ExtractClass<CR><ESC>
-vmap <leader>rC :action ExtractClass<CR><ESC>
-nmap <leader>rl :action rspec.LetIntroduce<CR><ESC>
-vmap <leader>rl :action rspec.LetIntroduce<CR><ESC>
-nmap <leader>fm :action Move<CR>
-vmap <leader>fm :action Move<CR>
-nmap <leader>fc :action CopyElement<CR>
-vmap <leader>fc :action CopyElement<CR>
