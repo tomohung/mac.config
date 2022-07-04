@@ -131,15 +131,15 @@ nmap ,c :action NewElementSamePlace<CR>
 nmap <Space>w :action AceAction<CR>
 nmap <Space>v :action AceTargetAction<CR>
 
-nmap \\yv ?if<CR>wvt:y
-nmap \\v ?if<CR>wvt::action IntroduceVariable<CR><Esc>
-nmap \\s :action ChangeSignature<CR>
+"nmap \\yv ?if<CR>wvt:y
+"nmap \\v ?if<CR>wvt::action IntroduceVariable<CR><Esc>
+"nmap \\s :action ChangeSignature<CR>
 imap <A-;> <Esc>:action IntroduceVariable<CR>
 nmap <A-;> :action IntroduceVariable<CR>
 imap <A-.> self.
 nmap <A-.> iself.
 nmap <A-L> :set rnu!<CR>
-nmap zsi ^df:j$ps else <Esc>Jde
+"nmap zsi ^df:j$ps else <Esc>Jde
 
 """ Mappings --------------------------------
 nmap <leader>gb :action Annotate<CR>
