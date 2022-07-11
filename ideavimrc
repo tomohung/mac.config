@@ -69,9 +69,13 @@ nmap zk :action GotoPreviousError<CR>
 nmap zgc zz:action CheckinProject<CR>
 
 nmap zra zz:action ReformatCode<CR>:action Rerun<CR><ESC>
+
 imap zra <Esc>zz:action ReformatCode<CR>:action Rerun<CR><ESC>
-nmap zrn <Action>(RunClass)
-imap zrn <ESC><Action>(RunClass)
+nmap zrn zz:action ReformatCode<CR><Action>(RunClass)
+imap zrn <ESC>zz:action ReformatCode<CR><Action>(RunClass)
+nmap zrd zz:action ReformatCode<CR><Action>(Debug)
+vmap zrd <ESC>zz:action ReformatCode<CR><Action>(Debug)
+
 nmap zf mbgg :action RunClass<CR><ESC>'b
 imap zf <ESC>mbgg :action RunClass<CR><ESC>'b
 nmap zif ddIels<ESC>==
@@ -156,8 +160,8 @@ nmap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
 nmap <leader>gh :action Github.Open.In.Browser<CR>
 vmap <leader>gh :action Github.Open.In.Browser<CR>
 
-nmap <leader>dm :action ToggleLineBreakpoint<CR>
-vmap <leader>dm :action ToggleLineBreakpoint<CR>
+nmap <leader>tb :action ToggleLineBreakpoint<CR>
+vmap <leader>tb :action ToggleLineBreakpoint<CR>
 
 nmap <leader>no :<C-u>nohlsearch<CR>
 
