@@ -21,3 +21,12 @@ windows:
     shell_command: nvim
   - zsh
   window_name: rates
+- layout: 3c36,238x55,0,0{139x55,0,0,2,98x55,140,0,3}
+  start_directory: ~/easyship/ebay-exports-api
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: nvim
+  - zsh
+  window_name: ebay-exports
