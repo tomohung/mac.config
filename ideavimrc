@@ -160,8 +160,8 @@ nmap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
 nmap <leader>gh :action Github.Open.In.Browser<CR>
 vmap <leader>gh :action Github.Open.In.Browser<CR>
 
-nmap <leader>tb :action ToggleLineBreakpoint<CR>
-vmap <leader>tb :action ToggleLineBreakpoint<CR>
+nmap <leader>bm :action ToggleLineBreakpoint<CR>
+vmap <leader>bm :action ToggleLineBreakpoint<CR>
 
 nmap <leader>no :<C-u>nohlsearch<CR>
 
