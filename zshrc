@@ -101,6 +101,7 @@ gDelete() {
 
 alias pr='hub pr checkout'
 alias r='make rspec'
+alias rs='bundle exec rspec'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
