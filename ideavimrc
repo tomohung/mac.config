@@ -76,8 +76,9 @@ imap zrn <ESC>zz:action ReformatCode<CR><Action>(RunClass)
 nmap zrd zz:action ReformatCode<CR><Action>(Debug)
 vmap zrd <ESC>zz:action ReformatCode<CR><Action>(Debug)
 
-nmap zf mbgg :action RunClass<CR><ESC>'b
-imap zf <ESC>mbgg :action RunClass<CR><ESC>'b
+nmap zf zz:action ReformatCode<CR>mbgg :action RunClass<CR><ESC>'b
+imap zf <ESC>zz:action ReformatCode<CR>mbgg :action RunClass<CR><ESC>'b
+
 nmap zif ddIels<ESC>==
 imap zif <ESC>ddIels<ESC>==
 
