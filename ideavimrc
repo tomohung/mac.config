@@ -68,9 +68,11 @@ nmap zn :action GotoNextError<CR>
 nmap zk :action GotoPreviousError<CR>
 nmap zgc zz:action CheckinProject<CR>
 
-nmap zra zz:action ReformatCode<CR>:action Rerun<CR><ESC>
+nmap zra zz:action ReformatCode<CR>:action Run<CR><ESC>
+imap zra <Esc>zz:action ReformatCode<CR>:action Run<CR><ESC>
+nmap zrr zz:action ReformatCode<CR>:action Rerun<CR><ESC>
+imap zrr <Esc>zz:action ReformatCode<CR>:action Rerun<CR><ESC>
 
-imap zra <Esc>zz:action ReformatCode<CR>:action Rerun<CR><ESC>
 nmap zrn zz:action ReformatCode<CR><Action>(RunClass)
 imap zrn <ESC>zz:action ReformatCode<CR><Action>(RunClass)
 nmap zrd zz:action ReformatCode<CR><Action>(Debug)
@@ -82,7 +84,7 @@ imap zf <ESC>zz:action ReformatCode<CR>mbgg :action RunClass<CR><ESC>'b
 nmap zif ddIels<ESC>==
 imap zif <ESC>ddIels<ESC>==
 
-map zrr :action RenameElement<CR>
+"map zrr :action RenameElement<CR>
 
 map zri :action Inline<CR>
 imap zri <Esc>:action Inline<CR>
