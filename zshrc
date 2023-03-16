@@ -71,6 +71,13 @@ fdeploy() {
   git push --force-with-lease origin "$(git_current_branch):deploy/$1"
 }
 
+release() {
+  echo "deploy tag: $1 -> origin/deploy/production"
+  gf && \
+    git push --force-with-lease origin "$1:deploy/production" && \
+    gh release edit $1 --prerelease=false --latest
+}
+
 gmerge() {
   local b="$(git_current_branch)"
   echo "PR: $1 merge into the branch: ${b}"
