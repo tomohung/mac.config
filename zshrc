@@ -78,6 +78,14 @@ release() {
     gh release edit $1 --prerelease=false --latest
 }
 
+hotfix() {
+  echo "deploy hotfix: commit $1 -> origin/deploy/production"
+  gco deploy/production && \
+    gfgro && \
+    git cherry-pick $1 && \
+    gp
+}
+
 gmerge() {
   local b="$(git_current_branch)"
   echo "PR: $1 merge into the branch: ${b}"
