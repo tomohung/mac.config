@@ -152,8 +152,10 @@ nmap <A-L> :set rnu!<CR>
 nmap <leader>gb :action Annotate<CR>
 vmap <leader>gb :action Annotate<CR>
 
-nmap <leader>cf :action CopyContentRootPath<CR>
+nmap <leader>cf :action CopyPathFromRepositoryRootProvider<CR>
 nmap <leader>cn :action CopyPathWithLineNumber<CR>
+nmap <leader>cg :action Github.Copy.Link.To.GitHub<CR>
+vmap <leader>cg :action Github.Copy.Link.To.GitHub<CR>
 
 nmap <leader>e :action SelectInProjectView<CR>
 nmap <leader>tt :action GotoTest<CR>
