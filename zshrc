@@ -71,9 +71,19 @@ fdeploy() {
   git push --force-with-lease origin "$(git_current_branch):deploy/$1"
 }
 
+check_missing_production_commits_from() {
+  local missing=$(git log --no-merges origin/deploy/production "^$1")
+  if [[ ! -z ${missing} ]]; then
+    echo ${missing}
+    echo "\nAlert! Commits on production are not included to: $1"
+  fi
+  [[ -z ${missing} ]]
+}
+
 release() {
   echo "deploy tag: $1 -> origin/deploy/production"
   gf && \
+    check_missing_production_commits_from $1 && \
     git push --force-with-lease origin "$1:deploy/production" && \
     gh release edit $1 --prerelease=false --latest
 }
