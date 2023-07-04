@@ -54,12 +54,6 @@ export EDITOR='vim'
 
 # Alias
 
-# git fetch and reset to origin branch
-gfgro() {
-  [[ "$#" != 1 ]] && local b="$(git_current_branch)"
-  git fetch && git reset --hard origin/"${b:=$1}"
-}
-
 alias gfgrbi='gf && grbi'
 
 deploy() {
@@ -71,11 +65,18 @@ fdeploy() {
   git push --force-with-lease origin "$(git_current_branch):deploy/$1"
 }
 
+# git fetch and reset to origin branch
+gfgro() {
+  [[ "$#" != 1 ]] && local b="$(git_current_branch)"
+  git fetch && git reset --hard origin/"${b:=$1}"
+}
+
+# in case a hotfix commit on deploy/production and we won't override it
 check_missing_production_commits_from() {
   local missing=$(git log --no-merges origin/deploy/production "^$1")
   if [[ ! -z ${missing} ]]; then
     echo ${missing}
-    echo "\nAlert! Commits on production are not included to: $1"
+    echo -e "\n\e[33mAlert! Commits on production are not included to: $1\e[0m"
   fi
   [[ -z ${missing} ]]
 }
