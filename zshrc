@@ -83,7 +83,7 @@ check_missing_production_commits_from() {
 
 release() {
   echo "deploy tag: $1 -> origin/deploy/production"
-  gf && \
+  git fetch && \
     check_missing_production_commits_from $1 && \
     git push --force-with-lease origin "$1:deploy/production" && \
     gh release edit $1 --prerelease=false --latest
@@ -91,10 +91,10 @@ release() {
 
 hotfix() {
   echo "deploy hotfix: commit $1 -> origin/deploy/production"
-  gco deploy/production && \
+  git checkout deploy/production && \
     gfgro && \
     git cherry-pick $1 && \
-    gp
+    git push
 }
 
 gmerge() {
