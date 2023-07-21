@@ -71,7 +71,7 @@ gfgro() {
   git fetch && git reset --hard origin/"${b:=$1}"
 }
 
-# in case a hotfix commit on deploy/production and we won't override it
+# Check any commits on deploy/production should be included in the release version
 check_missing_production_commits_from() {
   local missing=$(git log --no-merges origin/deploy/production "^$1")
   if [[ ! -z ${missing} ]]; then
@@ -85,6 +85,13 @@ release() {
   echo "deploy tag: $1 -> origin/deploy/production"
   git fetch && \
     check_missing_production_commits_from $1 && \
+    git push --force-with-lease origin "$1:deploy/production" && \
+    gh release edit $1 --prerelease=false --latest
+}
+
+frelease() {
+  echo "deploy tag: $1 -> origin/deploy/production"
+  git fetch && \
     git push --force-with-lease origin "$1:deploy/production" && \
     gh release edit $1 --prerelease=false --latest
 }
