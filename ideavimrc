@@ -154,8 +154,8 @@ vmap <leader>gb :action Annotate<CR>
 
 nmap <leader>cf :action CopyPathFromRepositoryRootProvider<CR>
 nmap <leader>cn :action CopyPathWithLineNumber<CR>
-nmap <leader>cg :action Github.Copy.Link.To.GitHub<CR>
-vmap <leader>cg :action Github.Copy.Link.To.GitHub<CR>
+nmap <leader>cg :action GitHub.Copy.Link<CR>
+vmap <leader>cg :action Github.Copy.Link<CR>
 
 nmap <leader>e :action SelectInProjectView<CR>
 nmap <leader>tt :action GotoTest<CR>
