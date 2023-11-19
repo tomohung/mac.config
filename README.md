@@ -95,7 +95,7 @@ $(brew --prefix)/opt/fzf/install
 #### asdf
 
 ```
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 ```
 
 run

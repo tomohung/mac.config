@@ -25,6 +25,7 @@ brew "neovim"
 brew "tmuxp"
 brew "git-recent"
 brew "fzf"
+brew "libpq"
 
 # asdf
 brew "openssl"
@@ -33,22 +34,16 @@ brew "ruby-build"
 
 # 'brew install --cask'
 cask "iterm2"
-cask "kiwi-for-gmail"
 cask "obsidian"
 cask "skitch"
 cask "rubymine"
-cask "alfred"
+cask "raycast"
 cask "dash"
 cask "google-drive"
 cask "kobo"
-cask "microsoft-edge"
 cask "postman"
-cask "shiftit"
-cask "skype"
 cask "slack"
 cask "sublime-text"
-cask "menumeters"
-cask "1password"
 cask "docker"
 cask "google-cloud-sdk"
 cask "openvanilla"
@@ -57,4 +52,3 @@ cask "keycastr"
 
 # 'mas install'
 # mas "1Password", id: 1333542190
-mas "pocket", id: 568494494
