@@ -2,7 +2,7 @@
 
 ## Initial
 
-1. extract `.ssh` to `~`
+1. extract `.ssh` to `~` or https://developer.1password.com/docs/ssh/
 
 2. clone mac.config (This repo)
 ```
@@ -101,7 +101,7 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 run
 ```
 asdf plugin add ruby
-asdf install ruby 2.6.9
+asdf install ruby 3.0.6
 ```
 
 For vim tags
