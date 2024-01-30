@@ -114,6 +114,11 @@ gem install ripper-tags
 ln -s ~/mac.config/ideavimrc ~/.ideavimrc
 ```
 
+add ENV to rspec configuration
+```
+PGGSSENCMODE=disable
+```
+
 #### tig
 ```
 ln -s ~/mac.config/tigrc ~/.tigrc
