@@ -73,7 +73,7 @@ gfgro() {
 
 # Check any commits on deploy/production should be included in the release version
 check_missing_production_commits_from() {
-  local missing=$(git log --no-merges origin/deploy/production "^$1")
+  local missing=$(git log --oneline --cherry-pick --right-only $1...origin/deploy/production)
   if [[ ! -z ${missing} ]]; then
     echo ${missing}
     echo -e "\n\e[33mAlert! Commits on production are not included to: $1\e[0m"
