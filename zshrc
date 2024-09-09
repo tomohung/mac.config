@@ -58,11 +58,11 @@ alias gfgrbi='gf && grbi'
 
 deploy() {
   echo "deploy: $(git_current_branch) -> origin/deploy/$1"
-  git push origin "$(git_current_branch):deploy/$1"
+  git push origin "$(git_current_branch):refs/heads/deploy/$1"
 }
 fdeploy() {
   echo "deploy: $(git_current_branch) -> origin/deploy/$1"
-  git push --force-with-lease origin "$(git_current_branch):deploy/$1"
+  git push --force-with-lease origin "$(git_current_branch):refs/heads/deploy/$1"
 }
 
 # git fetch and reset to origin branch
