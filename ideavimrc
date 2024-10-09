@@ -154,16 +154,16 @@ vmap <leader>gb :action Annotate<CR>
 
 nmap <leader>cf :action CopyPathFromRepositoryRootProvider<CR>
 nmap <leader>cn :action CopyPathWithLineNumber<CR>
-nmap <leader>cg <Action>(GitHub.Copy.Link)
-vmap <leader>cg <Action>(GitHub.Copy.Link)
+nmap <leader>cg :action uk.co.ben_gibson.git.link.ui.actions.menu.CopyAction<CR>
+vmap <leader>cg :action uk.co.ben_gibson.git.link.ui.actions.menu.CopyAction<CR>
 
 nmap <leader>e :action SelectInProjectView<CR>
 nmap <leader>tt :action GotoTest<CR>
 nmap <leader>tr :action GotoRelated<CR>
 nmap <leader>tm :action MoveEditorToOppositeTabGroup<CR>
 
-nmap <leader>gh :action Github.Open.In.Browser<CR>
-vmap <leader>gh :action Github.Open.In.Browser<CR>
+nmap <leader>gh :action uk.co.ben_gibson.git.link.ui.actions.menu.BrowserAction<CR>
+vmap <leader>gh :action uk.co.ben_gibson.git.link.ui.actions.menu.BrowserAction<CR>
 
 nmap <leader>bm :action ToggleLineBreakpoint<CR>
 vmap <leader>bm :action ToggleLineBreakpoint<CR>
