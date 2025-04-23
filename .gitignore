@@ -5,3 +5,4 @@ autoload
 *.swp
 tags
 Brewfile.lock.json
+tags.lock

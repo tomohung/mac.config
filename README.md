@@ -1,8 +1,8 @@
-# Setup 2022 Maccbook M1 Pro
+# Setup 2024 Maccbook M4 Mini
 
 ## Initial
 
-1. extract `.ssh` to `~` or https://developer.1password.com/docs/ssh/
+1. extract `.ssh` to `~`
 
 2. clone mac.config (This repo)
 ```
@@ -38,18 +38,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
-Copy config
-```
-ln -s ~/mac.config/vimrc ~/.vimrc
-```
-
-or neovim
+Neovim
 ```
 mkdir ~/.config/nvim
 ln -s ~/mac.config/vimrc ~/.config/nvim/init.vim
 ```
 
-2. open vim
+2. open nvim
 3. `:PlugInstall` # not necessary for first time
 
 ## Tmux
@@ -67,24 +62,21 @@ ln -s ~/mac.config/tmux.conf ~/.tmux.conf
 open tmux > `prefix + I` -> install plugin
 
 #### Auto start tmux in iTerm2
-use Tmuxp template
-
-```
-ln -s ~/mac.config/tmuxp ~/.config/tmuxp
-```
-
 Navigate to "Preferences > Profiles > PROFILE > Command > Send text at start" and set it to:
 ```
-tmuxp load easyship
+tmux attach -t tomo || tmux new -s tomo zsh
 ```
 
 #### Enable copy at iTerm2
-If you have tmux 1.5 or newer and are using iTerm2 version 3 or newer then the y in copy-mode and mouse selection will work without tmux-yank.
-
 To enable this:
 1. Go into iTerm2's preferences.
-2. Go to the "General" tab.
+2. Go to the "General" > "Selection" tab.
 3. Check "Applications in terminal may access clipboard"
+
+#### Import Color
+Appearnace > Colors > Color Presets > Import
+
+Pick the color file from this repo.
 
 #### fzf
 
@@ -94,29 +86,10 @@ $(brew --prefix)/opt/fzf/install
 ```
 #### asdf
 
-```
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
-```
-
 run
 ```
 asdf plugin add ruby
-asdf install ruby 3.0.6
-```
-
-For vim tags
-```
-gem install ripper-tags
-```
-
-#### RubyMine
-```
-ln -s ~/mac.config/ideavimrc ~/.ideavimrc
-```
-
-add ENV to rspec configuration
-```
-PGGSSENCMODE=disable
+asdf install ruby latest
 ```
 
 #### tig

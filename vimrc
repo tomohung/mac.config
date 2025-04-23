@@ -34,9 +34,9 @@ Plug 'tpope/vim-fugitive' " :Gstatus(-/p/C-n/U/dp)/:Gblame/:Gdiff/:Gread/:Gwrite
 Plug 'airblade/vim-gitgutter' " show git diff in the gutter
 Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 Plug 'majutsushi/tagbar' " display tags in a winsow
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-endif
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" endif
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
