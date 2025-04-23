@@ -37,6 +37,9 @@ export LC_ALL=en_US.UTF-8
 # recommended by brew doctor
 export PATH="/usr/local/sbin:$PATH"
 
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # put local secret here
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
