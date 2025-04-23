@@ -1,13 +1,21 @@
 # Setup 2024 Maccbook M4 Mini
 
+## SSH
+
+Follow
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+```
+gh ssh-key add ~/.ssh/id_ed25519.pub --type authentication
+```
+
 ## Initial
 
-1. extract `.ssh` to `~`
-
-2. clone mac.config (This repo)
+clone mac.config (This repo)
 ```
 git clone git@github.com:tomohung/mac.config.git
 ```
+
 ### install homebrew
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
