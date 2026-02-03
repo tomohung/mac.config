@@ -36,6 +36,8 @@ export LC_ALL=en_US.UTF-8
 
 # recommended by brew doctor
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
 
 # asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
