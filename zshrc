@@ -57,6 +57,7 @@ export EDITOR='nvim'
 
 alias vi="nvim"
 alias gfgrbi='gf && grbi'
+alias mp3='yt-dlp -x --audio-format mp3'
 
 # git fetch and reset to origin branch
 gfgro() {
