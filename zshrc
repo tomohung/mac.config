@@ -57,8 +57,7 @@ export EDITOR='nvim'
 
 alias vi="nvim"
 alias gfgrbi='gf && grbi'
-alias mp3='yt-dlp -x --audio-format mp3'
-
+alias mp3='yt-dlp -x --audio-format mp3 --postprocessor-args "ffmpeg:-ar 16000 -ac 1 -b:a 64k"'
 # git fetch and reset to origin branch
 gfgro() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
