@@ -104,3 +104,21 @@ asdf install ruby latest
 ```
 ln -s ~/mac.config/tigrc ~/.tigrc
 ```
+
+## Ghostty
+
+Install
+```
+brew install --cask ghostty
+```
+
+Setup config symlink
+```
+mkdir -p ~/.config/ghostty
+ln -s ~/mac.config/ghostty.config ~/.config/ghostty/config
+```
+
+> **Note:** On macOS, `cmd+,` may open a default config file at `~/Library/Application Support/com.mitchellh.ghostty/config` instead of the symlinked one. Remove it if it exists:
+> ```
+> rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
+> ```
