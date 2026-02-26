@@ -58,6 +58,10 @@ export EDITOR='nvim'
 alias vi="nvim"
 alias gfgrbi='gf && grbi'
 alias mp3='yt-dlp -x --audio-format mp3 --postprocessor-args "ffmpeg:-ar 16000 -ac 1 -b:a 64k"'
+alias video='yt-dlp -f "bestvideo[height<=1080][ext=mp4]+bestaudio[abr<=64]/best[height<=1080]"'
+alias cc=claude
+alias cr=claude -r
+
 # git fetch and reset to origin branch
 gfgro() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
