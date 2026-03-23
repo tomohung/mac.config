@@ -13,7 +13,7 @@ else " for vim
   endif
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 Plug 'tomasiser/vim-code-dark' " theme
 " Plug 'vim-airline/vim-airline' " better status bar
 Plug 'itchyny/lightline.vim' " better status bar
@@ -57,6 +57,7 @@ Plug 'ruanyl/vim-gh-line' " <leader>gh open code on github
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'elixir-editors/vim-elixir'
+Plug 'OXY2DEV/markview.nvim'
 " Plug 'mattn/emmet-vim' " exapnding abbreviations html
 
 " Ruby
