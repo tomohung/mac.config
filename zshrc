@@ -53,6 +53,8 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -U -g ""'
 
 export EDITOR='nvim'
 
+export CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1
+
 # Alias
 
 alias vi="nvim"
