@@ -22,6 +22,8 @@ brew "zsh"
 # brew "imagemagick"
 brew "diff-so-fancy"
 brew "neovim"
+brew "tree-sitter-cli" # nvim-treesitter compiles parsers with it
+brew "ripgrep" # nvim :grep / fzf-lua live_grep
 brew "tmuxp"
 brew "git-recent"
 brew "fzf"
