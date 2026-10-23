@@ -25,17 +25,20 @@ git clone git@github.com:tomohung/mac.config.git
 brew bundle
 ```
 
-## config for diff-so-fancy
-https://github.com/so-fancy/diff-so-fancy
+## Git pager (delta)
+https://github.com/dandavison/delta
 ```
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global core.pager delta
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global delta.navigate true
 ```
 
-## Antigen for ZSH
+## Zsh (antidote + starship)
 ```
 ln -s ~/mac.config/zshrc ~/.zshrc
 ```
-make sure iTerm is using zsh, then close iTerm and open again will automatical update
+Plugins are listed in `zsh_plugins.txt` and cloned by antidote on the first shell start.
+The prompt is starship (default config, customize in `~/.config/starship.toml`).
 
 ## Neovim
 
@@ -102,36 +105,7 @@ Update later: `:PlugUpdate`, `:TSUpdate`, `:MasonUpdate`
 | `gc` / `gcc` | comment (built in) |
 | `zc` `zo` `za` | fold / unfold (treesitter folds) |
 
-## Tmux
-#### Tmux Plugin Manager
-Install
-```
-if [ ! -d ~/.tmux/plugins ]; then
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
-```
-Run
-```
-ln -s ~/mac.config/tmux.conf ~/.tmux.conf
-```
-open tmux > `prefix + I` -> install plugin
-
-#### Auto start tmux in iTerm2
-Navigate to "Preferences > Profiles > PROFILE > Command > Send text at start" and set it to:
-```
-tmux attach -t tomo || tmux new -s tomo zsh
-```
-
-#### Enable copy at iTerm2
-To enable this:
-1. Go into iTerm2's preferences.
-2. Go to the "General" > "Selection" tab.
-3. Check "Applications in terminal may access clipboard"
-
-#### Import Color
-Appearnace > Colors > Color Presets > Import
-
-Pick the color file from this repo.
+## Other tools
 
 #### fzf
 

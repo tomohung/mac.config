@@ -1,58 +1,43 @@
-# 'brew tap'
-# tap "homebrew/cask-fonts"
-# 'brew tap' with custom Git URL
-# tap "user/tap-repo", "https://user@bitbucket.org/user/homebrew-tap-repo.git"
-# set arguments for all 'brew install --cask' commands
-# cask_args appdir: "~/Applications", require_sha: true
-# cask_args appdir: "~/Applications"
-
 # 'brew install'
-brew "cmake"
 brew "git"
+brew "gh"
 brew "tig"
-brew "antigen"
-brew "openssl"
-brew "reattach-to-user-namespace"
-brew "the_silver_searcher"
-# brew "tmux"
-# brew "vim"
-# brew "watchman"
-brew "zsh"
-# brew "hub"
-# brew "imagemagick"
-brew "diff-so-fancy"
+brew "lazygit"
+brew "git-delta"
+brew "git-recent"
+brew "git-filter-repo"
+brew "antidote"
+brew "starship"
 brew "neovim"
 brew "tree-sitter-cli" # nvim-treesitter compiles parsers with it
 brew "ripgrep" # nvim :grep / fzf-lua live_grep
-brew "tmuxp"
-brew "git-recent"
+brew "fd" # FZF_DEFAULT_COMMAND
 brew "fzf"
+brew "bat"
+brew "zoxide"
+brew "jq"
+brew "coreutils"
+brew "yt-dlp"
+brew "ffmpeg" # yt-dlp audio/video conversion
+brew "poppler"
+brew "hugo"
+brew "foreman"
+# brew "imagemagick"
 # brew "libpq"
-brew "gh"
 
 # asdf
-brew "openssl"
-brew "readline"
+brew "asdf"
 brew "ruby-build"
 
-brew "asdf"
-
 # 'brew install --cask'
-cask "iterm2"
+cask "ghostty"
+cask "font-jetbrains-mono-nerd-font"
 # cask "obsidian"
-# cask "skitch"
-# cask "rubymine"
 # cask "raycast"
-# cask "dash"
-# cask "google-drive"
-# cask "kobo"
-# cask "postman"
 # cask "slack"
-# cask "sublime-text"
 # cask "docker"
 # cask "google-cloud-sdk"
 # cask "openvanilla"
-# cask "font-meslo-lg-nerd-font"
 # cask "keycastr"
 
 # 'mas install'
