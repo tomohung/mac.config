@@ -31,7 +31,6 @@ brew "ruby-build"
 
 # 'brew install --cask'
 cask "ghostty"
-cask "font-jetbrains-mono-nerd-font"
 # cask "obsidian"
 # cask "raycast"
 # cask "slack"
