@@ -159,6 +159,9 @@ nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Git commit -v -q<CR>
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gl :Git pull<CR>
+" :GBrowse opens through :Browse when defined; fugitive's netrw fallback calls
+" netrw#BrowseX with an argument count Neovim 0.12's netrw rejects (E118)
+command! -nargs=1 Browse lua vim.ui.open(<q-args>)
 " open current line / selection on GitHub (was vim-gh-line)
 nnoremap <Leader>gh :.GBrowse<CR>
 xnoremap <Leader>gh :GBrowse<CR>
