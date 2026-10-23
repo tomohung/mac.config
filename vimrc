@@ -87,7 +87,7 @@ nnoremap <leader>= :wincmd =<cr>
 
 """ Key Mapping
 " open vimrc
-nnoremap <Leader>vim :tabe $MYVIMRC<CR>
+nnoremap <Leader>vim :exe "tabe" fnameescape(resolve($MYVIMRC))<CR>
 
 " open a new line above when insert mode ; CAUSION: this overwrite default <C-o>
 inoremap <C-o> <ESC>O
