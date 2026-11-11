@@ -40,6 +40,15 @@ alias cc=claude
 alias ccd='claude --dangerously-skip-permissions'
 alias lg=lazygit
 
+deploy() {
+  echo "deploy: $(git_current_branch) -> origin/deploy/$1"
+  git push origin "$(git_current_branch):refs/heads/deploy/$1"
+}
+fdeploy() {
+  echo "deploy: $(git_current_branch) -> origin/deploy/$1"
+  git push --force-with-lease origin "$(git_current_branch):refs/heads/deploy/$1"
+}
+
 # git fetch and reset to origin branch
 gfgro() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
