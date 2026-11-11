@@ -48,6 +48,11 @@ fdeploy() {
   git push --force-with-lease origin "$(git_current_branch):refs/heads/deploy/$1"
 }
 
+# git fetch and rebase onto origin branch
+gfgrb() {
+  git fetch && git rebase origin/"$1"
+}
+
 # git fetch and interactive rebase onto origin branch
 gfgrbi() {
   git fetch && git rebase -i origin/"$1"
